@@ -2,12 +2,141 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+  - rule: Goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+  - rule: Give Affirmation
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+  - rule: Happy User
+  steps:
+  - intent: mood_great
+  - action: utter_happy
+  
+  - rule: Unhappy User
+  steps:
+  - intent: mood_unhappy
+  - action: utter_sad
+
+  - rule: Bot Challenge Response
   steps:
   - intent: bot_challenge
-  - action: utter_iamabot
+  - action: utter_bot_challenge
+
+  - rule: Suggest Investment
+  steps:
+  - intent: ask_investment_suggestion
+  - action: action_investment_suggestion
+
+  - rule: Provide User Details
+  steps:
+  - intent: provide_user_details
+  - action: utter_acknowledge_user_details
+ 
+ - rule: Fetch Stock Price
+  steps:
+  - intent: ask_stock_price
+  - action: action_fetch_stock_price
+
+  - rule: Fetch Stock Trend
+  steps:
+  - intent: ask_stock_trend
+  - action: action_fetch_stock_trend
+
+  - rule: Fetch Stock News
+  steps:
+  - intent: ask_stock_news
+  - action: action_fetch_stock_news
+  
+  - rule: Manage Portfolio
+  steps:
+  - intent: manage_portfolio
+  - action: action_manage_portfolio
+
+  - rule: Show Past Conversations
+  steps:
+  - intent: retrieve_past_conversations
+  - action: action_retrieve_chat_history
+
+  - rule: Reset Conversation
+  steps:
+  - intent: reset_conversation
+  - action: action_reset_chat
+
+  - rule: Answer Financial Basics
+  steps:
+  - intent: ask_financial_basics
+  - action: action_financial_education
+
+  - rule: Analyse Risk
+  steps:
+  - intent: ask_risk_analysis
+  - action: action_risk_analysis
+
+  - rule: Answer Tax Queries
+  steps:
+  - intent: ask_tax_saving
+  - action: action_tax_saving_tips
+
+   - rule: Answer Crypto Currency
+  steps:
+  - intent: ask_crypto_investments
+  - action: action_crypto_investment_advice
+
+   - rule: Offer Loan Guidance
+  steps:
+  - intent:  ask_loan_guidance
+  - action: action_loan_guidance
+
+ - rule: Offer Insurance Guidance
+  steps:
+  - intent: ask_insurance_guidance
+  - action: action_insurance_advice
+
+ - rule: Offer Real Estate Guidance
+  steps:
+  - intent: ask_real_estate_investments
+  - action: action_real_estate_tips
+
+ - rule: Offer Gold Investments Guidance
+  steps:
+  - intent: ask_gold_investments
+  - action: action_gold_investment_tips
+
+ - rule: Offer Goal Based Investment Guidance
+  steps:
+  - intent: ask_goal_based_investment
+  - action: action_goal_based_investment
+
+ - rule: Emergency Fund Guidance
+  steps:
+  - intent: ask_emergency_fund
+  - action: action_emergency_fund_advice
+
+ - rule: Debt Management Guidance
+  steps:
+  - intent: ask_debt_management
+  - action: action_debt_management_tips
+
+ - rule: Market Forecast
+  steps:
+  - intent: ask_market_forecast
+  - action: action_market_forecast
+
+
+
+
+
+
+
+
+

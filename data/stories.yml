@@ -1,0 +1,19 @@
+version: "3.1"
+
+stories:
+
+- story: user asks for investment advice
+  steps:
+  - intent: ask_investment_advice
+  - action: utter_investment_advice
+
+- story: user wants stock price
+  steps:
+  - intent: ask_stock_price
+  - action: action_get_stock_price
+
+- story: user asks about mutual funds
+  steps:
+  - intent: ask_mutual_fund_info
+  - action: utter_mutual_fund_info
+

@@ -1,0 +1,274 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_investment_suggestion
+  examples: |
+    - I am [25](age) years old and want to invest ₹[100000](investment_amount) for [wealth growth](investment_goal) with [medium](risk_level) risk. What should I do?
+    - I have ₹[50000](investment_amount) and want to save for [retirement](investment_goal). 
+    - I want to invest for [10](investment_duration) years with [low](risk_level) risk.
+    - Is it a good time to buy stocks?
+    - What are good investment options for a [30](age)-year-old?
+    - Should I invest in gold or stocks?
+    - Which are the safest investments in India?
+    - What are the best investment options for tax saving?
+    - Should I invest in real estate?
+    - Can you help me build a diversified portfolio?
+
+- intent: provide_user_details
+  examples: |
+    - My name is [Rahul](name), I am [25](age) years old.
+    - I want to invest ₹[50000](investment_amount) with [medium](risk_level) risk.
+
+- intent: ask_stock_price
+  examples: |
+    - What is the price of [TCS.NS](stock_symbol)?
+    - How is [RELIANCE.NS](stock_symbol) performing today?
+    - Get me the latest stock price of [Infosys](stock_symbol).
+    - Show me the live stock market data for [HDFC](stock_symbol).
+    - How did the market perform today?
+    - What are the top gainers and losers today?
+    - What is NIFTY 50 at right now?
+    - Can you fetch the current Sensex value?
+
+- intent: ask_stock_trend
+  examples: |
+    - Show me the stock trend of [INFY.NS](stock_symbol).
+    - How has [HDFC.NS](stock_symbol) performed in the last week?
+
+- intent: ask_stock_news
+  examples: |
+    - Show me the latest news for [RELIANCE](stock_symbol).
+    - What are the recent updates on [TATA](stock_symbol)?
+
+- intent: manage_portfolio
+  examples: |
+    - Add [INFY.NS](stock_symbol) to my portfolio.
+    - Remove [TCS.NS](stock_symbol) from my portfolio.
+    - Show me my portfolio.
+
+- intent: retrieve_past_conversations
+  examples: |
+    - Show me my previous chats
+    - What did we talk about last time?
+    - Can I see my previous chat?
+    - Retrieve my chat history.
+
+- intent: reset_conversation
+  examples: |
+    - Start a new conversation.
+    - Reset the chat.
+    - Forget everything and start fresh.
+    - I want to begin a new discussion.
+
+- intent: ask_financial_basics
+  examples: |
+    - What is compounding in finance?
+    - Can you explain SIP (Systematic Investment Plan)?
+    - How do mutual funds work?
+    - What is the stock market?
+    - Can you teach me about investing?
+    - What is risk management in finance?
+    - Explain asset allocation.
+    - How do I plan my finances effectively?
+    - What is inflation and how does it affect investments?
+    - Can you explain the difference between stocks and bonds?
+    - What are ETFs, and should I invest in them?
+    - How does diversification reduce risk?
+
+- intent: ask_risk_analysis
+  examples: |
+    - How do I assess my investment risk?
+    - What are the different risk levels in investing?
+    - How do I minimize investment risk?
+    - What is a high-risk investment?
+    - How do I balance risk and return in my portfolio?
+    - Should I take more risks while I am young?
+    - What percentage of my portfolio should be in equity?
+    - Can you explain asset allocation strategies?
+    - How do I rebalance my investment portfolio?
+
+- intent: ask_tax_saving
+  examples: |
+    - How can I save tax through investments?
+    - What are the best tax-saving options in India?
+    - Can you tell me about Section 80C tax benefits?
+    - How does ELSS help in tax saving?
+    - What are the tax benefits of NPS?
+    - Should I invest in PPF for tax savings?
+    - What are the best tax-free investments?
+    - How do I plan for my retirement?
+    - What is the best pension plan in India?
+    - How much should I save for retirement?
+    - Can you explain the difference between EPF and PPF?
+    - Should I choose an annuity plan for retirement?
+
+- intent: ask_crypto_investments
+  examples: |
+    - Should I invest in cryptocurrency?
+    - What are the risks of Bitcoin?
+    - Is Ethereum a good investment?
+    - Can I buy crypto in India legally?
+    - What is blockchain, and how does it work?
+    - How does taxation on crypto work in India?
+    - Should I invest in NFTs?
+    - What are the safest ways to invest in cryptocurrency?
+    - Can you suggest any alternative investments?
+
+- intent: ask_loan_guidance
+  examples: |
+    - How do I get the best home loan?
+    - What are the benefits of personal loans?
+    - Should I take an education loan?
+    - How do I improve my CIBIL score?
+    - Is taking a business loan a good idea?
+    - Should I pay off my loan early?
+    - What is the difference between secured and unsecured loans?
+
+- intent: ask_insurance_guidance
+  examples: |
+    - What type of insurance do I need?
+    - Should I get health insurance?
+    - What is term life insurance?
+    - Is ULIP a good investment?
+    - How much life insurance do I need?
+    - What is the difference between term insurance and whole life insurance?
+    - Should I get critical illness insurance?
+    - What are the best car insurance options?
+
+- intent: ask_real_estate_investments
+  examples: |
+    - Is real estate a good investment?
+    - Should I buy property or rent?
+    - What are REITs?
+    - How does real estate investment work?
+    - What are the risks in real estate investing?
+
+- intent: ask_gold_investments
+  examples: |
+    - Should I invest in gold?
+    - What are the best ways to buy gold?
+    - Is digital gold a good investment?
+    - What is the difference between physical gold and ETFs?
+    - What is the current gold rate?
+
+- intent: ask_goal_based_investment
+  examples: |
+    - How do I save for my child’s education?
+    - What is the best way to invest for a house?
+    - Can you help me plan for retirement?
+    - How much do I need to save for a vacation?
+    - What’s the best way to invest for my wedding?
+    - How do I create a financial plan for the future?
+
+- intent: ask_emergency_fund
+  examples: |
+    - How much should I have in my emergency fund?
+    - What is an emergency fund?
+    - How do I save for unexpected expenses?
+    - Why is an emergency fund important?
+    - Should I invest my emergency savings?
+
+- intent: ask_debt_management
+  examples: |
+    - How do I pay off my debt faster?
+    - What is the best way to clear credit card debt?
+    - How can I manage multiple loans?
+    - Should I pay off my mortgage early?
+    - How do I reduce my financial stress? 
+
+- intent: ask_market_forecast
+  examples: |
+    - What is the future of the stock market?
+    - How will the economy perform this year?
+    - What are the latest investment trends?
+    - Can you predict stock prices?
+    - What sectors will grow in the future?

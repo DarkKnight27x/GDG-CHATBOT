@@ -4,31 +4,69 @@ intents:
   - greet
   - goodbye
   - affirm
-  - deny
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - ask_investment_suggestion
+  - provide_user_details
+  - ask_stock_price
+  - ask_stock_trend
+  - ask_stock_news
+  - manage_portfolio
+  - retrieve_past_conversations
+  - reset_conversation
+  - ask_financial_basics
+  - ask_risk_analysis
+  - ask_tax_saving
+  - ask_crypto_investments
+  - ask_loan_guidance
+  - ask_insurance_guidance
+  - ask_real_estate_investments
+  - ask_gold_investments
+  - ask_goal_based_investment
+  - ask_emergency_fund
+  - ask_debt_management
+  - ask_market_forecast
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+    - text: "Hello! How can I assist you today?"
   utter_goodbye:
-  - text: "Bye"
+    - text: "Goodbye! Have a great day!"
+  utter_affirm:
+    - text: "Great!"
+  utter_happy:
+    - text: "I'm glad to hear that!"
+  utter_sad:
+    - text: "I'm sorry to hear that. How can I help?"
+  utter_bot_challenge:
+    - text: "I am a bot, powered by Rasa."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_acknowledge_user_details:
+    - text: "Thank you for providing your details!"
+
+actions:
+  - action_investment_suggestion
+  - action_fetch_stock_price
+  - action_fetch_stock_trend
+  - action_fetch_stock_news
+  - action_manage_portfolio
+  - action_retrieve_chat_history
+  - action_reset_chat
+  - action_financial_education
+  - action_risk_analysis
+  - action_tax_saving_tips
+  - action_crypto_investment_advice
+  - action_loan_guidance
+  - action_insurance_advice
+  - action_real_estate_tips
+  - action_gold_investment_tips
+  - action_goal_based_investment
+  - action_emergency_fund_advice
+  - action_debt_management_tips
+  - action_market_forecast
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+

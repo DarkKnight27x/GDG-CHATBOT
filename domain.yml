@@ -28,22 +28,113 @@ intents:
   - ask_debt_management
   - ask_market_forecast
 
+entities:
+  - age
+  - investment_amount
+  - investment_goal
+  - risk_level
+  - investment_duration
+  - stock_symbol
+  - name
+
+slots:
+  age:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: age
+    auto_fill: false
+      
+
+  investment_amount:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: investment_amount
+    auto_fill: false
+
+  investment_goal:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: investment_goal
+    auto_fill: false
+
+  risk_level:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: risk_level
+    auto_fill: false
+
+  investment_duration:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: investment_duration
+    auto_fill: false
+
+  stock_symbol:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: stock_symbol
+
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: name
+
 responses:
   utter_greet:
     - text: "Hello! How can I assist you today?"
+
   utter_goodbye:
     - text: "Goodbye! Have a great day!"
+
   utter_affirm:
     - text: "Great!"
+
   utter_happy:
     - text: "I'm glad to hear that!"
+
   utter_sad:
     - text: "I'm sorry to hear that. How can I help?"
-  utter_bot_challenge:
-    - text: "I am a bot, powered by Rasa."
+
+  utter_ask_investment_suggestion:
+    - text: "Based on your details, I recommend the following investment strategy: {investment_goal} with {risk_level} risk for {investment_duration} years. Would you like more details?"
+
+  utter_ask_stock_price:
+    - text: "Fetching the latest price for {stock_symbol}. Please wait..."
+
+  utter_ask_stock_trend:
+    - text: "Here's the trend for {stock_symbol} over the past week."
+
+  utter_ask_stock_news:
+    - text: "Here are the latest news updates for {stock_symbol}."
+
+  utter_manage_portfolio:
+    - text: "Your portfolio has been updated."
+
+  utter_retrieve_past_conversations:
+    - text: "Here is your past conversation history."
+
+  utter_reset_conversation:
+    - text: "Starting a new conversation. Let’s begin fresh!"
 
   utter_acknowledge_user_details:
     - text: "Thank you for providing your details!"
+
+  utter_default:
+    - text: "I'm sorry, I didn't quite understand that. Can you rephrase?"
 
 actions:
   - action_investment_suggestion
@@ -69,4 +160,3 @@ actions:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-

@@ -14,7 +14,7 @@ from typing import Any, Text, Dict, List
 
 # 🔹 Gemini API Setup
 GEMINI_API_KEY = "AIzaSyBBS7MqVizPsFvVZB7GzcHM9xL4lrBlvAA"
-GEMINI_API_URL = "https://generativeai.googleapis.com/v1/models/gemini-pro:generate"
+GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta2/models/gemini-1.5-pro:generateContent"
 
 # 🔹 Database Connection (MySQL)
 db_config = {

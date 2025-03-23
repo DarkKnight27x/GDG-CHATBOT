@@ -44,7 +44,7 @@ slots:
     mappings:
       - type: from_entity
         entity: age
-    auto_fill: false
+  
       
 
   investment_amount:
@@ -53,7 +53,7 @@ slots:
     mappings:
       - type: from_entity
         entity: investment_amount
-    auto_fill: false
+    
 
   investment_goal:
     type: text
@@ -61,7 +61,7 @@ slots:
     mappings:
       - type: from_entity
         entity: investment_goal
-    auto_fill: false
+    
 
   risk_level:
     type: text
@@ -69,7 +69,7 @@ slots:
     mappings:
       - type: from_entity
         entity: risk_level
-    auto_fill: false
+    
 
   investment_duration:
     type: float
@@ -77,7 +77,7 @@ slots:
     mappings:
       - type: from_entity
         entity: investment_duration
-    auto_fill: false
+    
 
   stock_symbol:
     type: text
@@ -109,32 +109,71 @@ responses:
   utter_sad:
     - text: "I'm sorry to hear that. How can I help?"
 
-  utter_ask_investment_suggestion:
+  action_investment_suggestion:
     - text: "Based on your details, I recommend the following investment strategy: {investment_goal} with {risk_level} risk for {investment_duration} years. Would you like more details?"
 
-  utter_ask_stock_price:
+  utter_acknowledge_user_details:
+    - text: "Please provide your name and age."
+
+
+  action_fetch_stock_price:
     - text: "Fetching the latest price for {stock_symbol}. Please wait..."
 
-  utter_ask_stock_trend:
+  action_fetch_stock_trend:
     - text: "Here's the trend for {stock_symbol} over the past week."
 
-  utter_ask_stock_news:
+  action_fetch_stock_news:
     - text: "Here are the latest news updates for {stock_symbol}."
 
-  utter_manage_portfolio:
+  action_manage_portfolio:
     - text: "Your portfolio has been updated."
 
-  utter_retrieve_past_conversations:
+  action_retrieve_chat_history:
     - text: "Here is your past conversation history."
 
-  utter_reset_conversation:
+  action_reset_chat:
     - text: "Starting a new conversation. Let’s begin fresh!"
 
-  utter_acknowledge_user_details:
-    - text: "Thank you for providing your details!"
 
-  utter_default:
+  action_financial_education:
+    - text: "Here are some basic financial tips for you."
+
+  action_risk_analysis:
+    - text: "Here are some risk analysis tips for you."
+
+  action_tax_saving_tips: 
+    - text: "Here are some tax saving tips for you."      
+
+  action_crypto_investments:
+    - text: "Here are some crypto investment tips for you."
+
+  action_loan_guidance:  
+    - text: "Here are some loan guidance tips for you."
+
+  action_insurance_advice:
+    - text: "Here are some insurance guidance tips for you."
+
+  action_real_estate_tips:
+    - text: "Here are some real estate investment tips for you."
+
+  action_gold_investments_tips: 
+    - text: "Here are some gold investment tips for you."
+
+  action_goal_based_investment:  
+    - text: "Here are some goal-based investment tips for you."
+
+  action_emergency_fund_advice:
+    - text: "Here are some emergency fund tips for you."
+
+  action_debt_management_tips:
+    - text: "Here are some debt management tips for you."
+
+  action_market_forecast:
+    - text: "Here are some market forecast tips for you."
+
+  utter_bot_challenge:
     - text: "I'm sorry, I didn't quite understand that. Can you rephrase?"
+
 
 actions:
   - action_investment_suggestion

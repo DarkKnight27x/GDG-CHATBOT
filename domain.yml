@@ -44,8 +44,6 @@ slots:
     mappings:
       - type: from_entity
         entity: age
-  
-      
 
   investment_amount:
     type: float
@@ -53,7 +51,6 @@ slots:
     mappings:
       - type: from_entity
         entity: investment_amount
-    
 
   investment_goal:
     type: text
@@ -61,7 +58,6 @@ slots:
     mappings:
       - type: from_entity
         entity: investment_goal
-    
 
   risk_level:
     type: text
@@ -69,19 +65,17 @@ slots:
     mappings:
       - type: from_entity
         entity: risk_level
-    
 
   investment_duration:
-    type: float
+    type: text
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: investment_duration
-    
 
   stock_symbol:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     mappings:
       - type: from_entity
         entity: stock_symbol
@@ -109,71 +103,11 @@ responses:
   utter_sad:
     - text: "I'm sorry to hear that. How can I help?"
 
-  action_investment_suggestion:
-    - text: "Based on your details, I recommend the following investment strategy: {investment_goal} with {risk_level} risk for {investment_duration} years. Would you like more details?"
-
   utter_acknowledge_user_details:
     - text: "Please provide your name and age."
 
-
-  action_fetch_stock_price:
-    - text: "Fetching the latest price for {stock_symbol}. Please wait..."
-
-  action_fetch_stock_trend:
-    - text: "Here's the trend for {stock_symbol} over the past week."
-
-  action_fetch_stock_news:
-    - text: "Here are the latest news updates for {stock_symbol}."
-
-  action_manage_portfolio:
-    - text: "Your portfolio has been updated."
-
-  action_retrieve_chat_history:
-    - text: "Here is your past conversation history."
-
-  action_reset_chat:
-    - text: "Starting a new conversation. Let’s begin fresh!"
-
-
-  action_financial_education:
-    - text: "Here are some basic financial tips for you."
-
-  action_risk_analysis:
-    - text: "Here are some risk analysis tips for you."
-
-  action_tax_saving_tips: 
-    - text: "Here are some tax saving tips for you."      
-
-  action_crypto_investments:
-    - text: "Here are some crypto investment tips for you."
-
-  action_loan_guidance:  
-    - text: "Here are some loan guidance tips for you."
-
-  action_insurance_advice:
-    - text: "Here are some insurance guidance tips for you."
-
-  action_real_estate_tips:
-    - text: "Here are some real estate investment tips for you."
-
-  action_gold_investments_tips: 
-    - text: "Here are some gold investment tips for you."
-
-  action_goal_based_investment:  
-    - text: "Here are some goal-based investment tips for you."
-
-  action_emergency_fund_advice:
-    - text: "Here are some emergency fund tips for you."
-
-  action_debt_management_tips:
-    - text: "Here are some debt management tips for you."
-
-  action_market_forecast:
-    - text: "Here are some market forecast tips for you."
-
   utter_bot_challenge:
-    - text: "I'm sorry, I didn't quite understand that. Can you rephrase?"
-
+    - text: "I'm an AI assistant, here to help with your financial queries."
 
 actions:
   - action_investment_suggestion
@@ -186,7 +120,7 @@ actions:
   - action_financial_education
   - action_risk_analysis
   - action_tax_saving_tips
-  - action_crypto_investment_advice
+  - action_crypto_investments
   - action_loan_guidance
   - action_insurance_advice
   - action_real_estate_tips
@@ -195,6 +129,9 @@ actions:
   - action_emergency_fund_advice
   - action_debt_management_tips
   - action_market_forecast
+  - action_crypto_investment_advice
+  
+
 
 session_config:
   session_expiration_time: 60

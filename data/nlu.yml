@@ -92,11 +92,85 @@ nlu:
     - What are the best investment options for tax saving?
     - Should I invest in real estate?
     - Can you help me build a diversified portfolio?
+    - I have ₹[200000](investment_amount). Where should I invest it?
+    - Can I double my money in [5](investment_duration) years?
+    - What are some high-return investment options?
+    - Is [crypto](investment_type) a good investment?
+    - Should I go for a [fixed deposit](investment_type) or mutual funds?
+    - I want to invest in [mutual funds](investment_type). How should I start?
+    - What’s the best way to invest ₹[10000](investment_amount) monthly?
+    - I am [40](age) years old and want to save for my child's education. What should I do?
+    - How can I invest in the [stock market](investment_type) with [low](risk_level) risk?
+    - What are the pros and cons of investing in [gold](investment_type)?
+    - Are [SIP](investment_type) investments better than lump sum?
+    - What is the best time to buy stocks?
+    - Should I invest in [equity](investment_type) or [fixed deposits](investment_type)?
+    - Can I invest in [real estate](investment_type) with [low](risk_level) risk?
+    - What are the best investment options for a [30](age)-year-old?
+    - What’s a good short-term investment option?
+    - How can I get passive income through investments?
+    - Is it better to invest in index funds or individual stocks?
+    - How much should I invest monthly for early retirement?
+    - What is the minimum amount required to start investing in stocks?
+    - I have ₹[5000](investment_amount) to invest. What should I do?
+    - How do I start investing as a beginner?
+    - Which stocks are good for long-term investment?
+    - What’s the safest way to invest in gold?
+    - Can I get high returns with [low](risk_level) risk?
+    - What are the best investment options in India for 2025?
+    - How can I invest my money in a way that beats inflation?
+    - Is it wise to invest in IPOs?
+    - What are some recession-proof investments?
+
+
 
 - intent: provide_user_details
   examples: |
     - My name is [Rahul](name), I am [25](age) years old.
     - I want to invest ₹[50000](investment_amount) with [medium](risk_level) risk.
+    - I am [30](age) and looking for investment options.
+    - Call me [Aditi](name), I am a [self-employed](occupation) professional.
+    - I am [22](age) and just started earning. Need investment advice.
+    - I have ₹[1,00,000](investment_amount) and want to invest for [5](investment_duration) years.
+    - I am a [student](occupation) and want to start investing.
+    - My risk appetite is [low](risk_level) and I prefer [mutual funds](investment_type).
+    - I am [40](age), married, and planning for retirement.
+    - I work as a [software engineer](occupation) and want investment suggestions.
+    - I am a beginner investor with ₹[10,000](investment_amount). Where should I start?
+    - I am [35](age) and looking for a mix of safe and high-return investments.
+    - I am a [business owner](occupation) and want to diversify my portfolio.
+    - I am saving for a [house](investment_goal) and need a 10-year plan.
+    - I am [single](marital_status) and looking for tax-saving investment options.
+    - I prefer [high](risk_level) risk investments and want to explore stocks.
+    - I am a [retiree](occupation) and want to secure my retirement savings.
+    - I am a [student](occupation) and want to start investing for [10](investment_duration) years.
+    - I am a [government employee](occupation) and need stable investment options.
+    - I earn ₹[75,000](monthly_income) per month and want to save [20%](savings_percentage) for investment.
+    - I am a [retired](occupation) person and need low-risk investment options.
+    - I want to invest in [stocks](investment_type) but don’t know where to start.
+    - I am [married](marital_status) and planning for my child's education.
+    - My income is variable since I am a [freelancer](occupation). What investment plan suits me?
+    - I have no prior investment experience and need help getting started.
+    - I am looking for short-term investments with high liquidity.
+    - I am [divorced](marital_status) and want to secure my future financially.
+    - I prefer passive investment options since I have a busy job.
+    - I am [50](age) years old and want a safe retirement plan.
+    - I am earning ₹[1,20,000](monthly_income) and can invest up to ₹[50,000](investment_amount) monthly.
+    - I am a [housewife](occupation) and want to grow my savings.
+    - I want to invest ₹[2,00,000](investment_amount) in [crypto](investment_type), is it safe?
+    - My salary is ₹[60,000](monthly_income), and I can save ₹[20,000](savings_percentage) for investment.
+    - I want to invest for my wedding in [5](investment_duration) years.
+    - I work in the [finance](industry) sector and need tax-saving investment options.
+    - I want to retire early at [50](retirement_age) and need an investment plan.
+    - My company offers an Employee Provident Fund (EPF). Should I invest beyond that?
+    - I have ₹[5,00,000](investment_amount) and want to invest in real estate.
+    - I am a [student](occupation) with no fixed income but want to start investing.
+    - I recently received an inheritance of ₹[10,00,000](investment_amount). How should I invest it?
+    - I want to invest in socially responsible companies. Any suggestions?
+    - I am [unemployed](occupation) but want to start investing with minimal funds.
+    - I work in a startup and have an irregular salary. How should I manage my investments?
+    - I have [health issues](personal_situation) and need investment options with insurance benefits.
+    - I am planning to move abroad in [2](investment_duration) years. Should I invest in India or internationally?
 
 - intent: ask_stock_price
   examples: |
@@ -108,29 +182,488 @@ nlu:
     - What are the top gainers and losers today?
     - What is NIFTY 50 at right now?
     - Can you fetch the current Sensex value?
+    - What’s the latest update on [ICICI Bank](stock_symbol)?
+    - How much is [Adani Enterprises](stock_symbol) trading at?
+    - What’s the stock price of [SBI.NS](stock_symbol) today?
+    - Check today’s price for [Wipro](stock_symbol).
+    - Show me [HDFC Bank](stock_symbol)’s market price.
+    - What’s the trading price of [ITC.NS](stock_symbol) now?
+    - Is [Bajaj Finance](stock_symbol) up or down today?
+    - Tell me the latest price of [Axis Bank](stock_symbol).
+    - Show me the closing price of [HUL](stock_symbol) today.
+    - What was the high and low for [Maruti Suzuki](stock_symbol) today?
+    - How is [Tata Motors](stock_symbol) performing?
+    - Is [Infosys](stock_symbol) bullish or bearish today?
+    - Give me the latest update on [Nestle India](stock_symbol).
+    - How’s [Kotak Mahindra Bank](stock_symbol) doing today?
+    - Track today’s stock price of [L&T](stock_symbol).
+    - What’s the current stock price of [Asian Paints](stock_symbol)?
+    - Tell me today’s price movement for [NTPC](stock_symbol).
+    - Fetch live stock data for [ONGC](stock_symbol).
+    - What is today’s market trend?
+    - What’s happening in the Indian stock market today?
+    - What’s the NIFTY 50 closing rate?
+    - How much did Sensex gain or lose today?
+    - What are today’s biggest stock gainers?
+    - Which stocks dropped the most today?
+    - What’s the market capitalization of [HCL Tech](stock_symbol)?
+    - Is [Bharti Airtel](stock_symbol) a good buy today?
+    - What was the highest price for [Tata Steel](stock_symbol) today?
+    - Can you show me the 52-week high of [JSW Steel](stock_symbol)?
+    - Get me the latest value of [Zomato](stock_symbol).
+    - What’s the intraday change in [Paytm](stock_symbol)?
+    - Which stocks are hitting upper circuits today?
+    - What’s the pre-market price of [IRCTC](stock_symbol)?
+    - What is the aftermarket trend of [Vedanta](stock_symbol)?
+    - Give me today’s market breadth.
+    - Is the overall market bullish or bearish today?
+    - Can you compare [HDFC](stock_symbol) and [ICICI](stock_symbol) stock performance?
+    - How did [TCS.NS](stock_symbol) perform last week?
+    - What’s the five-day trend of [Reliance](stock_symbol)?
+    - Is [Tata Power](stock_symbol) breaking resistance today?
+    - Show me today’s candlestick pattern for [BPCL](stock_symbol).
+    - What’s the trading volume for [Dr. Reddy’s](stock_symbol) today?
+    - How many shares of [PVR](stock_symbol) were traded today?
+    - Fetch today’s stock market index levels.
+    - Which stocks are currently oversold?
+    - Which are the most active stocks today?
+    - What is the dividend yield of [M&M](stock_symbol)?
+    - Show me today’s price change in percentage for [DLF](stock_symbol).
+    - Can you show me today’s gain/loss for [Apollo Hospitals](stock_symbol)?
+    - What’s the latest P/E ratio of [UltraTech Cement](stock_symbol)?
+    - Can you check today’s moving average for [Tata Chemicals](stock_symbol)?
+    - Fetch RSI levels for [Eicher Motors](stock_symbol).
+    - What’s the opening price of [HDFC Life](stock_symbol) today?
+    - Show me today’s performance of [Titan](stock_symbol).
+    - Is [Biocon](stock_symbol) in the green today?
+    - Can you fetch the stock trends for [Sun Pharma](stock_symbol)?
+    - How did [Bajaj Auto](stock_symbol) perform in the last hour?
+    - What’s the latest resistance level for [Cipla](stock_symbol)?
+    - Show me today’s technical indicators for [Havells](stock_symbol).
+    - Can you give me the last traded price of [IndusInd Bank](stock_symbol)?
+    - How much has [Tata Elxsi](stock_symbol) gained in the last month?
+    - Compare today’s opening and closing prices for [Shree Cement](stock_symbol).
+    - How many stocks are in the green today?
+    - What’s the last one-month return for [BHEL](stock_symbol)?
+    - Can you fetch the latest stock report for [NMDC](stock_symbol)?
+    - Show me today’s price chart for [Bajaj Finserv](stock_symbol).
+    - What’s the five-day performance of [Coal India](stock_symbol)?
+    - What’s the impact of today’s news on [Hero MotoCorp](stock_symbol)?
+    - Is [HDFC AMC](stock_symbol) in an uptrend?
+    - Which NIFTY stocks are underperforming today?
+    - Show me the highest traded stock today.
+    - What’s the EPS of [Britannia](stock_symbol) after today’s market close?
+    - Show me today’s most volatile stocks.
+    - What’s the latest market news on [IDFC First Bank](stock_symbol)?
+    - Can you tell me today’s movement for [Tata Consumer](stock_symbol)?
+    - How much did [TVS Motors](stock_symbol) fluctuate today?
+    - Which large-cap stocks performed well today?
+    - How’s the banking sector performing today?
+    - What’s the turnover for [PNB](stock_symbol) in today’s market?
+    - Show me a list of top gainers in the FMCG sector.
+    - Is [LIC](stock_symbol) stock going up or down?
+    - What’s the price action of [Godrej Properties](stock_symbol) today?
+    - Give me today’s highest performing IT stocks.
+    - Show me today’s trading range for [Jubilant Foodworks](stock_symbol).
+    - What’s the impact of today’s news on [ONGC](stock_symbol)?
+    - Show me the relative strength index (RSI) for [Tata Steel](stock_symbol).
+    - What’s the latest news affecting [SBI Cards](stock_symbol)?
+    - Compare [HUL](stock_symbol) and [Nestle India](stock_symbol) stock prices.
+    - Is [L&T](stock_symbol) forming a new trend?
+    - Which mid-cap stocks are performing the best today?
+
 
 - intent: ask_stock_trend
   examples: |
     - Show me the stock trend of [INFY.NS](stock_symbol).
     - How has [HDFC.NS](stock_symbol) performed in the last week?
+    - What is the one-month trend for [TCS.NS](stock_symbol)?
+    - Show me the historical prices of [RELIANCE.NS](stock_symbol).
+    - How did [SBIN.NS](stock_symbol) perform in the last 6 months?
+    - Compare the last year's trend of [ITC.NS](stock_symbol).
+    - Has [WIPRO.NS](stock_symbol) been rising or falling recently?
+    - What’s the past week's performance of [TATASTEEL.NS](stock_symbol)?
+    - Is [HDFCBANK.NS](stock_symbol) in an uptrend or downtrend?
+    - Show me the last 3 months' stock price movement for [ICICIBANK.NS](stock_symbol).
+    - Can you fetch a year-to-date chart for [BAJFINANCE.NS](stock_symbol)?
+    - How did [ADANIENT.NS](stock_symbol) perform this quarter?
+    - Give me a 5-year performance overview of [LT.NS](stock_symbol).
+    - What is the last day's closing price trend for [SUNPHARMA.NS](stock_symbol)?
+    - Compare the stock trends of [TCS.NS](stock_symbol) and [INFY.NS](stock_symbol).
+    - Show me a weekly price movement chart for [MARUTI.NS](stock_symbol).
+    - Has [COALINDIA.NS](stock_symbol) shown any significant movement this week?
+    - Fetch the last 10-day closing price for [POWERGRID.NS](stock_symbol).
+    - What is the stock’s performance trend over the last 1 year?
+    - Is [AXISBANK.NS](stock_symbol) a trending stock this month?
+    - Show me a graph of [NIFTY 50](stock_symbol) for the last 3 months.
+    - Has [TATAMOTORS.NS](stock_symbol) gained or lost in the past week?
+    - What’s the year-to-date percentage change of [ONGC.NS](stock_symbol)?
+    - How has [HINDUNILVR.NS](stock_symbol) performed over the last decade?
+    - Compare the yearly growth of [DRREDDY.NS](stock_symbol) and [CIPLA.NS](stock_symbol).
+    - What’s the recent movement in [BHARTIARTL.NS](stock_symbol)?
+    - Fetch a 6-month trend line for [M&M.NS](stock_symbol).
+    - Has [TITAN.NS](stock_symbol) been stable over the past 12 months?
+    - Show me the biggest weekly movers in NIFTY.
+    - What are the top-performing stocks in the past 5 years?
+    - How has [ULTRACEMCO.NS](stock_symbol) reacted to recent news?
+    - Can you track the performance of [GRASIM.NS](stock_symbol) over 3 years?
+    - Show me a volatility chart for [INDUSINDBK.NS](stock_symbol).
+    - What’s the CAGR of [BPCL.NS](stock_symbol) over the last decade?
+    - How did [DABUR.NS](stock_symbol) perform during the pandemic?
+    - Has [HEROMOTOCO.NS](stock_symbol) shown a bullish trend?
+    - Compare [HAVELLS.NS](stock_symbol) and [VOLTAS.NS](stock_symbol) over the past quarter.
+    - Show me the moving average trend for [NTPC.NS](stock_symbol).
+    - What’s the all-time high of [PIDILITIND.NS](stock_symbol)?
+    - Is [BAJAJ-AUTO.NS](stock_symbol) approaching its resistance level?
+    - What are the 52-week highs and lows of [AUROPHARMA.NS](stock_symbol)?
+    - How did [ZEEL.NS](stock_symbol) respond to its last earnings report?
+    - Has [GAIL.NS](stock_symbol) been oversold recently?
+    - Compare the past month’s price action of [BIOCON.NS](stock_symbol).
+    - Fetch the highest price of [DLF.NS](stock_symbol) in the last 6 months.
+    - What’s the price momentum for [LUPIN.NS](stock_symbol)?
+    - Show me RSI trends for [MINDTREE.NS](stock_symbol).
+    - Is [TVSMOTOR.NS](stock_symbol) forming a bullish pattern?
+    - How has [IRCTC.NS](stock_symbol) been trending since its IPO?
+    - What’s the market cap growth of [ZOMATO.NS](stock_symbol) over the years?
+    - How has [PAYTM.NS](stock_symbol) performed since listing?
+    - Compare [ICICIBANK.NS](stock_symbol) and [HDFCBANK.NS](stock_symbol) in the last decade.
+    - What’s the average monthly return for [SHREECEM.NS](stock_symbol)?
+    - Show me the stock performance of [ADANIPORTS.NS](stock_symbol) during Q1.
+    - What is the price pattern of [EICHERMOT.NS](stock_symbol) in the last 30 days?
+    - Fetch Fibonacci retracement levels for [BANDHANBNK.NS](stock_symbol).
+    - Is [YESBANK.NS](stock_symbol) still recovering from its 2020 crash?
+    - What’s the market trend of [PNB.NS](stock_symbol) in the past 6 months?
+    - Show me the 14-day ATR of [BANKBARODA.NS](stock_symbol).
+    - Which stocks have crossed their 200-day moving average recently?
+    - How has [JSWSTEEL.NS](stock_symbol) reacted to the latest policy changes?
+    - Is [BPCL.NS](stock_symbol) in a consolidation phase?
+    - Show me the percentage gain of [SIEMENS.NS](stock_symbol) this quarter.
+    - Compare the 3-month trend of [IOC.NS](stock_symbol) and [BPCL.NS](stock_symbol).
+    - Fetch the PE ratio trend for [ASHOKLEY.NS](stock_symbol).
+    - What’s the MACD indicator saying about [SRF.NS](stock_symbol)?
+    - How has [UBL.NS](stock_symbol) reacted to inflation trends?
+    - Show me the last 7-day performance of [IDFCFIRSTB.NS](stock_symbol).
+    - Is [BERGEPAINT.NS](stock_symbol) a trending stock right now?
+    - Show me the cumulative returns of [HDFC.NS](stock_symbol) for the past 5 years.
+    - Fetch a sentiment analysis of [BOSCHLTD.NS](stock_symbol) based on news.
+    - How does [TATAPOWER.NS](stock_symbol) compare to [ADANIGREEN.NS](stock_symbol) in clean energy growth?
+    - What’s the weekly volatility of [HINDZINC.NS](stock_symbol)?
+    - Has [MPHASIS.NS](stock_symbol) seen any breakout signals lately?
+    - Show me the Bollinger Bands for [GODREJPROP.NS](stock_symbol).
+    - Fetch the quarterly revenue growth of [TORNTPHARM.NS](stock_symbol).
+    - Compare [INDIGO.NS](stock_symbol) and [SPICEJET.NS](stock_symbol) performance.
+    - Show me the highest trading volume day for [ESCORTS.NS](stock_symbol).
+    - Is [CUB.NS](stock_symbol) in an uptrend or downtrend this month?
+    - Show me the last 5 days of [NIFTY BANK](stock_symbol) performance.
+    - What’s the trend of [BSE SENSEX](stock_symbol) in the last 3 months?
+    - Fetch the beta value trend for [GICRE.NS](stock_symbol).
+
 
 - intent: ask_stock_news
   examples: |
     - Show me the latest news for [RELIANCE](stock_symbol).
     - What are the recent updates on [TATA](stock_symbol)?
+    - Fetch the latest headlines about [INFY](stock_symbol).
+    - What’s the latest financial news for [HDFC](stock_symbol)?
+    - Any breaking news related to [ICICIBANK](stock_symbol)?
+    - Can you show me recent articles about [WIPRO](stock_symbol)?
+    - What are analysts saying about [TCS](stock_symbol)?
+    - Give me today’s stock market news for [ITC](stock_symbol).
+    - Any major updates for [HDFCBANK](stock_symbol) this week?
+    - Show me trending stock news about [SBIN](stock_symbol).
+    - What’s happening with [BHARTIARTL](stock_symbol)?
+    - Show me expert opinions on [LT](stock_symbol).
+    - Are there any upcoming events for [MARUTI](stock_symbol)?
+    - What’s the impact of government policies on [COALINDIA](stock_symbol)?
+    - How has [TATAMOTORS](stock_symbol) been in the news lately?
+    - Any insider trading reports for [ONGC](stock_symbol)?
+    - Fetch news related to quarterly earnings of [HINDUNILVR](stock_symbol).
+    - What’s the recent media coverage on [CIPLA](stock_symbol)?
+    - Show me all news articles mentioning [DRREDDY](stock_symbol).
+    - Are there any fraud allegations against [SUNPHARMA](stock_symbol)?
+    - What’s the latest acquisition news about [BAJAJFINANCE](stock_symbol)?
+    - Any IPO news related to [ADANIENT](stock_symbol)?
+    - Show me regulatory updates on [TITAN](stock_symbol).
+    - Any merger or acquisition news for [AXISBANK](stock_symbol)?
+    - Fetch me the top headlines for [HAVELLS](stock_symbol).
+    - Are there any dividend announcements from [NTPC](stock_symbol)?
+    - What are the latest financial results of [GRASIM](stock_symbol)?
+    - Any upcoming board meetings for [INDUSINDBK](stock_symbol)?
+    - Show me recent price movement news for [BPCL](stock_symbol).
+    - What’s the government’s latest stance on [GAIL](stock_symbol)?
+    - Are there any stock split announcements for [DABUR](stock_symbol)?
+    - Any recent scams or controversies around [BIOCON](stock_symbol)?
+    - Show me the latest financial reports of [MINDTREE](stock_symbol).
+    - Any foreign investments in [IRCTC](stock_symbol)?
+    - What’s happening with [PAYTM](stock_symbol) in the news?
+    - Show me news on sector performance including [ZOMATO](stock_symbol).
+    - What’s the media buzz around [DLF](stock_symbol)?
+    - Any big updates about [L&T](stock_symbol) today?
+    - Has [TVSMOTOR](stock_symbol) announced any new launches?
+    - What’s the latest buyback news for [EICHERMOT](stock_symbol)?
+    - Fetch legal dispute news regarding [YESBANK](stock_symbol).
+    - Any government subsidies affecting [PNB](stock_symbol)?
+    - Show me investment trends related to [BANKBARODA](stock_symbol).
+    - Any new partnerships announced by [JSWSTEEL](stock_symbol)?
+    - What’s the latest on international expansion for [IOC](stock_symbol)?
+    - Show me the latest financial policies affecting [ASHOKLEY](stock_symbol).
+    - What’s the analyst prediction for [SRF](stock_symbol) based on news?
+    - Fetch company rating changes for [UBL](stock_symbol).
+    - Any recent credit rating downgrades for [IDFCFIRSTB](stock_symbol)?
+    - Show me sustainability-related news for [BERGEPAINT](stock_symbol).
+    - Are there any tax implications for [BOSCHLTD](stock_symbol)?
+    - What’s the expert take on the market reaction to [TATAPOWER](stock_symbol)?
+    - Fetch commodity-related news that affects [ADANIGREEN](stock_symbol).
+    - Any major investment bank reports on [HINDZINC](stock_symbol)?
+    - Show me the latest brokerage opinions on [MPHASIS](stock_symbol).
+    - Any dividend yield updates for [GODREJPROP](stock_symbol)?
+    - What are the economic risks for [TORNTPHARM](stock_symbol)?
+    - Is [INDIGO](stock_symbol) affected by rising fuel prices?
+    - Show me airline industry updates related to [SPICEJET](stock_symbol).
+    - Any foreign fund interest in [ESCORTS](stock_symbol)?
+    - Fetch economic survey reports mentioning [CUB](stock_symbol).
+    - Show me supply chain disruption news affecting [NIFTY 50](stock_symbol).
+    - What are the corporate governance issues for [BSE SENSEX](stock_symbol)?
+    - Show me RBI policy effects on [GICRE](stock_symbol).
+    - What’s the inflation impact on [HDFC.NS](stock_symbol)?
+    - Any new price targets set for [ICICIBANK](stock_symbol)?
+    - What’s the real estate market’s impact on [DLF](stock_symbol)?
+    - Show me the foreign direct investment trends for [TCS](stock_symbol).
+    - Any special dividends announced by [INFY](stock_symbol)?
+    - Show me management changes in [WIPRO](stock_symbol).
+    - Are there any financial fraud reports related to [SBIN](stock_symbol)?
+    - What are the latest technology advancements by [TATA](stock_symbol)?
+    - Is [ADANIPORTS](stock_symbol) investing in any new projects?
+    - Any updates on automation initiatives in [SIEMENS](stock_symbol)?
+    - Show me SEBI investigations involving [ZEEL](stock_symbol).
+    - What’s the latest fundraising news of [GODREJPROP](stock_symbol)?
+    - Show me credit growth-related news affecting [HDFC](stock_symbol).
+    - Any news related to infrastructure projects by [L&T](stock_symbol)?
+    - Are there any tax fraud allegations against [M&M](stock_symbol)?
+    - What’s the latest media coverage on [COALINDIA](stock_symbol)?
+    - Show me major corporate announcements of [NTPC](stock_symbol).
+    - Fetch industry trends affecting [POWERGRID](stock_symbol).
+    - What’s the latest on [IRCTC](stock_symbol) privatization?
+    - Show me the economic impact of global inflation on [RELIANCE](stock_symbol).
+    - Is [HINDALCO](stock_symbol) expanding internationally?
+    - What’s the buzz about [ADANIENTERPRISES](stock_symbol) in the news?
+    - Any government policy changes impacting [SUNPHARMA](stock_symbol)?
+    - Show me financial news affecting [CIPLA](stock_symbol).
+    - What’s the latest analyst rating for [MARUTI](stock_symbol)?
+    - Any hedge fund activity in [AXISBANK](stock_symbol)?
+    - Fetch the latest stock buy/sell recommendations for [DABUR](stock_symbol).
+    - Are there any fraud investigations against [TATACHEM](stock_symbol)?
+    - Show me the newest environmental initiatives by [JSWSTEEL](stock_symbol).
+    - Is [HAVELLS](stock_symbol) investing in green energy?
+    - What are experts saying about [BPCL](stock_symbol) this quarter?
+    - Show me the latest on [BHEL](stock_symbol) expansion plans.
 
 - intent: manage_portfolio
   examples: |
     - Add [INFY.NS](stock_symbol) to my portfolio.
     - Remove [TCS.NS](stock_symbol) from my portfolio.
     - Show me my portfolio.
+    - Add [RELIANCE.NS](stock_symbol) to my investments.
+    - Remove [HDFC.NS](stock_symbol) from my watchlist.
+    - Can you track [TATAMOTORS.NS](stock_symbol) for me?
+    - Add [ICICIBANK.NS](stock_symbol) to my holdings.
+    - Delete [WIPRO.NS](stock_symbol) from my portfolio.
+    - Show me all stocks in my portfolio.
+    - Update my portfolio with [AXISBANK.NS](stock_symbol).
+    - Add [ITC.NS](stock_symbol) to my watchlist.
+    - Remove [MARUTI.NS](stock_symbol) from my investments.
+    - What stocks do I currently hold?
+    - List all stocks in my portfolio.
+    - Remove all stocks from my watchlist.
+    - Track [SBIN.NS](stock_symbol) for me.
+    - I want to invest in [HDFCBANK.NS](stock_symbol).
+    - Remove [BHARTIARTL.NS](stock_symbol) from my holdings.
+    - How is my portfolio performing?
+    - Show my portfolio balance.
+    - Add [SUNPHARMA.NS](stock_symbol) to my stock list.
+    - Track my investment in [COALINDIA.NS](stock_symbol).
+    - Remove [ONGC.NS](stock_symbol) from my portfolio.
+    - Show me my stock holdings.
+    - Can you display my watchlist?
+    - Add [BAJAJFINANCE.NS](stock_symbol) to my portfolio.
+    - Monitor my portfolio’s performance.
+    - Show me my stock gains and losses.
+    - What’s my total portfolio value?
+    - List stocks I’ve invested in.
+    - Can you update my portfolio with [LT.NS](stock_symbol)?
+    - Remove [TITAN.NS](stock_symbol) from my investments.
+    - Show me my investment history.
+    - Add [DABUR.NS](stock_symbol) to my tracking list.
+    - Show me my profit and loss summary.
+    - How much profit have I made from my portfolio?
+    - Add [HAVELLS.NS](stock_symbol) to my portfolio.
+    - Delete my stock portfolio.
+    - Which stocks in my portfolio are in loss?
+    - Track [EICHERMOT.NS](stock_symbol) daily for me.
+    - Remove all my stock investments.
+    - Move [INDIGO.NS](stock_symbol) from watchlist to portfolio.
+    - Show my holdings in a pie chart.
+    - Which stock in my portfolio has performed the best?
+    - Add [M&M.NS](stock_symbol) to my portfolio.
+    - Add [BPCL.NS](stock_symbol) and [IOC.NS](stock_symbol) to my holdings.
+    - What’s the total return on my portfolio?
+    - Set an alert if [HDFC.NS](stock_symbol) drops below ₹2500.
+    - How much have I invested in [INFY.NS](stock_symbol)?
+    - Remove stocks that are in loss from my portfolio.
+    - Show my stock allocation.
+    - Export my portfolio as a CSV file.
+    - Compare my portfolio with NIFTY 50.
+    - Show me a summary of my investments.
+    - Display my highest-performing stocks.
+    - Remove the worst-performing stock from my portfolio.
+    - Transfer all stocks from my watchlist to my holdings.
+    - How much cash do I have left to invest?
+    - Add a stock alert for [JSWSTEEL.NS](stock_symbol).
+    - Which stocks in my portfolio have dividends?
+    - Remove [BIOCON.NS](stock_symbol) and [DRREDDY.NS](stock_symbol) from my holdings.
+    - Show me the top gainer in my portfolio.
+    - Add all stocks from my watchlist to my portfolio.
+    - What’s the average return of my portfolio?
+    - How much loss have I incurred in my stock holdings?
+    - Show me my long-term vs short-term investments.
+    - Set a target price alert for [TCS.NS](stock_symbol) at ₹4200.
+    - Can you fetch my portfolio performance for the past 6 months?
+    - How diversified is my portfolio?
+    - Show my portfolio in percentage allocation.
+    - Can you remove stocks below ₹100 from my holdings?
+    - What’s my exposure to tech stocks in my portfolio?
+    - Alert me when any stock in my portfolio falls 5%.
+    - Set a stop-loss for [TATAPOWER.NS](stock_symbol) at ₹250.
+    - Show me my total dividends earned.
+    - What’s my return on investment for [HDFCBANK.NS](stock_symbol)?
+    - Add a SIP investment in [SBI.NS](stock_symbol).
+    - Remove illiquid stocks from my portfolio.
+    - Which stocks in my portfolio are undervalued?
+    - Show me my total capital gains.
+    - Remove stocks with low liquidity from my holdings.
+    - Which of my stocks are near their 52-week high?
+    - Add an alert for a 10% drop in [HCLTECH.NS](stock_symbol).
+    - List stocks I have been tracking for over a year.
+    - Which stocks in my portfolio have high volatility?
+    - Show me my best-performing sector.
+    - Display my historical investment performance.
+    - What’s my portfolio’s risk level?
+    - Set a trailing stop-loss for [IRCTC.NS](stock_symbol).
+    - Track [GODREJPROP.NS](stock_symbol) for dividend payouts.
+    - Remove duplicate stocks from my holdings.
+    - Set a price target of ₹5000 for [ADANIENT.NS](stock_symbol).
+    - Which stocks in my portfolio have earnings reports this week?
+    - Export my portfolio as a PDF.
+    - Show me my investment trends over the past year.
+    - List all IPOs I have invested in.
+    - Which stocks in my portfolio have a P/E ratio above 30?
+    - What percentage of my portfolio is in blue-chip stocks?
+    - How many shares do I own of [LT.NS](stock_symbol)?
+    - Add [NTPC.NS](stock_symbol) to my portfolio.
 
 - intent: retrieve_past_conversations
   examples: |
-    - Show me my previous chats
+    - Show me my previous chats.
     - What did we talk about last time?
     - Can I see my previous chat?
     - Retrieve my chat history.
+    - Show my last conversation.
+    - Can you recall our previous discussion?
+    - Load my last chat.
+    - Fetch my past conversations.
+    - Show me all my past interactions.
+    - What was the last thing I asked you?
+    - What response did you give me last time?
+    - Can you remind me what we discussed earlier?
+    - Pull up our last conversation.
+    - Show my chat history for today.
+    - Display my messages from yesterday.
+    - Show me my saved conversations.
+    - Retrieve my old chats.
+    - What did I ask you about investments last time?
+    - Can I access my previous interactions?
+    - Load my conversation from two days ago.
+    - Bring up my last stock-related question.
+    - Show me our last discussion on portfolio management.
+    - What was my last question about stocks?
+    - Remind me what we talked about regarding real estate.
+    - Show my most recent financial advice query.
+    - Can I get a recap of my previous chat?
+    - Display my last five conversations.
+    - Pull up my recent messages.
+    - What were my last few queries?
+    - Do you remember what I asked you about mutual funds?
+    - Show me my chat from last week.
+    - Load my stock-related chats from the past month.
+    - Summarize my previous interactions.
+    - What advice did you give me last time?
+    - Can I view my conversation from a specific date?
+    - Retrieve my chat history from March 15th.
+    - Show my first-ever chat with you.
+    - When did I first ask you about investments?
+    - Can you fetch my conversation about tax-saving options?
+    - Remind me of my last stock market question.
+    - What was the last update I got about NIFTY 50?
+    - Pull up my last conversation about cryptocurrency.
+    - Bring up my messages related to financial planning.
+    - Show me all my past stock queries.
+    - Load my last three conversations on mutual funds.
+    - What was my last investment query?
+    - Find my last conversation on personal finance.
+    - Show my last chat about SIP investments.
+    - Retrieve my portfolio discussions.
+    - Can you show my last real estate investment chat?
+    - Show my last chat with stock recommendations.
+    - Retrieve my questions about high-return investments.
+    - Load my last query about risk assessment.
+    - Bring back my previous conversation about asset allocation.
+    - Fetch my messages about long-term investments.
+    - What was my last stock prediction query?
+    - Show me the answer you gave me yesterday.
+    - Can you recall my last question on financial planning?
+    - Display my messages related to short-term investments.
+    - Show my discussion on market trends from last week.
+    - Fetch my past chats about SIP vs. lump sum.
+    - Load my last NIFTY 50-related conversation.
+    - What was my last gold investment query?
+    - Retrieve my questions on diversification strategies.
+    - Bring up my portfolio performance discussions.
+    - Show my messages related to real estate trends.
+    - Load my last investment planning chat.
+    - Can I see my stock portfolio discussions from last month?
+    - Fetch my last conversation on risk management.
+    - Retrieve my queries about stock market analysis.
+    - Show my questions about passive income investments.
+    - Load my financial goal-setting conversation.
+    - What did I ask you about dividends last time?
+    - Bring back my conversation about systematic withdrawals.
+    - Retrieve my last wealth management discussion.
+    - Load my tax-saving investment queries.
+    - Fetch my long-term financial planning chat.
+    - Show my discussion on debt vs. equity investments.
+    - Retrieve my past questions about index funds.
+    - Can you recall my conversation about IPO investments?
+    - Fetch my messages on portfolio rebalancing.
+    - Bring up my past queries about inflation impact.
+    - Load my chat about emergency funds.
+    - Retrieve my last pension investment question.
+    - Show my discussion on compounding benefits.
+    - Bring up my last financial literacy chat.
+    - Load my queries about alternative investments.
+    - Retrieve my discussion on active vs. passive investing.
+    - What was my last query on market crashes?
+    - Bring up my messages about sector-based investing.
+    - Retrieve my investment behavior analysis.
+    - Show my conversation on dollar-cost averaging.
+    - Load my chats about foreign stock investments.
+    - What was the last news update I asked for?
+    - Retrieve my past questions about portfolio optimization.
+    - Show my last investment strategy chat.
+    - Fetch my previous queries on cryptocurrency regulation.
+    - Bring up my discussion on savings vs. investment allocation.
+    - Load my chats about real estate price trends.
+    - Show my last questions about systematic investment plans.
+
 
 - intent: reset_conversation
   examples: |
@@ -138,6 +671,103 @@ nlu:
     - Reset the chat.
     - Forget everything and start fresh.
     - I want to begin a new discussion.
+    - Let's start over.
+    - Clear all previous chats.
+    - Delete the current conversation.
+    - Erase everything and begin again.
+    - Wipe my chat history and restart.
+    - Start from scratch.
+    - Begin a new session.
+    - Can we start fresh?
+    - Reset everything.
+    - I want to clear this chat.
+    - Refresh our conversation.
+    - Let's reboot this discussion.
+    - Ignore all past chats and restart.
+    - Forget my last queries.
+    - Remove all previous messages.
+    - I want to reset the session.
+    - Restart this bot.
+    - Start over again.
+    - Drop this conversation and begin again.
+    - Clear chat memory.
+    - Wipe out everything and let’s start again.
+    - Forget what we talked about.
+    - Let's have a fresh start.
+    - Can you clear your memory and begin again?
+    - Reboot the chat system.
+    - Let's reset and chat anew.
+    - Purge this chat history.
+    - I need a new chat.
+    - I want a clean slate.
+    - Can we erase everything and start over?
+    - Forget my previous questions.
+    - Refresh this chat window.
+    - Remove all previous discussions.
+    - Discard this chat and start anew.
+    - Ignore the previous conversation.
+    - Wipe the slate clean.
+    - Let’s restart from zero.
+    - Go back to the beginning.
+    - I want a blank chat page.
+    - Can we start from the beginning?
+    - Forget my earlier messages.
+    - Clear out all responses.
+    - I’d like a brand-new chat.
+    - Please restart the session.
+    - I want a do-over.
+    - Can you reboot the chat?
+    - Forget all past responses.
+    - Restart the bot.
+    - Let's go from square one.
+    - I want to redo this conversation.
+    - I’d like to start a fresh dialogue.
+    - Throw away this chat and begin again.
+    - Can we reinitialize the session?
+    - I want to talk about something new.
+    - Forget everything so far.
+    - Let’s refresh the bot.
+    - I need a full chat reset.
+    - Please erase everything and restart.
+    - Can I get a new session?
+    - I’d like a clean conversation.
+    - Remove everything from this session.
+    - Let’s rewind and start over.
+    - Give me a blank chat.
+    - Purge all chat memory.
+    - Cancel this chat and begin fresh.
+    - Forget all responses and restart.
+    - Go back to the main menu.
+    - Refresh the conversation space.
+    - Can we reset this whole discussion?
+    - Let’s pretend this never happened.
+    - Scrap the current chat and begin again.
+    - Wipe all chat logs.
+    - Stop this and restart our talk.
+    - Reset and restart the chatbot.
+    - I want to restart this topic.
+    - Delete the session data.
+    - Forget the last few messages.
+    - Let's roll back to the start.
+    - Begin as if it’s my first time here.
+    - I want a new dialogue.
+    - Cancel all chat history.
+    - Restart and remove previous interactions.
+    - Start like it’s a new day.
+    - Wipe all stored responses.
+    - Reset your understanding of this conversation.
+    - Can you unlearn this session?
+    - Erase everything we discussed today.
+    - Let’s just forget the past chat.
+    - Reset my chat settings.
+    - Clear all stored messages.
+    - Restart our discussion like new.
+    - Flush the chat memory.
+    - Reboot this conversation.
+    - I need a chat refresh.
+    - Forget and restart the chatbot.
+    - Let's start clean from now.
+
 
 - intent: ask_financial_basics
   examples: |
@@ -153,6 +783,100 @@ nlu:
     - Can you explain the difference between stocks and bonds?
     - What are ETFs, and should I invest in them?
     - How does diversification reduce risk?
+    - What is financial planning?
+    - How can I start investing with a small amount?
+    - What are fixed deposits?
+    - What is the power of compounding?
+    - Can you explain what an index fund is?
+    - How do I calculate my net worth?
+    - What are blue-chip stocks?
+    - What is a bear market vs. a bull market?
+    - Can you explain fundamental analysis?
+    - What is technical analysis in stock trading?
+    - How do dividends work?
+    - What is the P/E ratio in stock markets?
+    - What are government bonds?
+    - How do corporate bonds differ from government bonds?
+    - What is a brokerage account?
+    - What does a Demat account do?
+    - What is the role of SEBI in Indian stock markets?
+    - How do hedge funds work?
+    - What are liquid funds?
+    - What is a money market account?
+    - What is an emergency fund?
+    - How do I create a budget?
+    - What are different types of bank accounts?
+    - What is a credit score, and why is it important?
+    - How do credit cards work?
+    - What are tax-saving investment options in India?
+    - What is ELSS (Equity Linked Savings Scheme)?
+    - How does ULIP (Unit Linked Insurance Plan) work?
+    - What are the different types of insurance?
+    - What is term life insurance?
+    - How do I plan for retirement?
+    - What are pension funds?
+    - How does the National Pension System (NPS) work?
+    - What is EPF (Employee Provident Fund)?
+    - What are annuities in finance?
+    - How do I invest in gold?
+    - What is sovereign gold bond (SGB)?
+    - What is a hedge in investing?
+    - How do futures and options work?
+    - What is arbitrage trading?
+    - What are REITs (Real Estate Investment Trusts)?
+    - What is passive investing?
+    - How do I invest in cryptocurrency?
+    - What is blockchain in finance?
+    - How does Bitcoin work?
+    - What are stablecoins?
+    - How do NFTs work?
+    - What is forex trading?
+    - What is a margin account in stock trading?
+    - What is leverage in trading?
+    - How do stop-loss orders work?
+    - What are candlestick charts in stock analysis?
+    - What are bull and bear traps?
+    - How do IPOs work?
+    - What is an investment portfolio?
+    - What are large-cap, mid-cap, and small-cap stocks?
+    - What is an expense ratio in mutual funds?
+    - How do credit ratings impact bond investments?
+    - What is a financial advisor?
+    - What is capital gains tax?
+    - How does wealth tax work?
+    - How do you calculate ROI (Return on Investment)?
+    - What is a financial bubble?
+    - What are Ponzi schemes?
+    - What is insider trading?
+    - What is market liquidity?
+    - How do exchange-traded funds (ETFs) work?
+    - What is a 401(k) and how does it work?
+    - What is a Roth IRA?
+    - How do mutual fund NAVs work?
+    - What is a debt-to-equity ratio?
+    - How do I create passive income?
+    - What is value investing?
+    - What is growth investing?
+    - How do dollar-cost averaging strategies work?
+    - What is asset rebalancing?
+    - What is short selling in stocks?
+    - What is a circuit breaker in stock markets?
+    - What is the Sharpe ratio?
+    - How do hedge funds make money?
+    - What is a bond yield?
+    - How do SIPs differ from lump sum investments?
+    - How does taxation work for mutual funds?
+    - What are the best books to learn about investing?
+    - What is a systematic withdrawal plan (SWP)?
+    - How do I choose the best mutual fund?
+    - How does inflation impact fixed deposits?
+    - What is a high-yield savings account?
+    - What is sustainable investing (ESG investing)?
+    - What are angel investments?
+    - What is private equity?
+    - How do startups raise funding?
+    - What is a venture capital firm?
+
 
 - intent: ask_risk_analysis
   examples: |
@@ -165,6 +889,100 @@ nlu:
     - What percentage of my portfolio should be in equity?
     - Can you explain asset allocation strategies?
     - How do I rebalance my investment portfolio?
+    - What is risk tolerance in investing?
+    - How do I determine my risk appetite?
+    - What factors affect investment risk?
+    - Can I invest with zero risk?
+    - What is the safest way to invest money?
+    - What are low-risk investment options?
+    - What are some high-risk, high-reward investments?
+    - What is systematic risk?
+    - What is unsystematic risk?
+    - How do macroeconomic factors impact investment risk?
+    - Can market volatility be predicted?
+    - How do I manage market risk?
+    - What are different types of financial risks?
+    - How do interest rates affect investment risk?
+    - What is credit risk?
+    - What is liquidity risk?
+    - What is inflation risk in investing?
+    - How does diversification reduce risk?
+    - What are hedging strategies in investing?
+    - Should I invest in high-risk or low-risk assets?
+    - How do I choose between aggressive and conservative investment strategies?
+    - What is the risk-return tradeoff?
+    - How do I adjust my risk level based on my age?
+    - Should I take higher risks for better returns?
+    - How do geopolitical events affect investment risk?
+    - What is risk-adjusted return?
+    - What is the Sharpe ratio?
+    - How do I calculate Value at Risk (VaR)?
+    - How can I protect my portfolio from economic downturns?
+    - What is capital risk in investing?
+    - How do stock market crashes impact risk?
+    - How do I protect my investments during a recession?
+    - What is beta in stock market analysis?
+    - How does volatility impact my portfolio?
+    - How do I measure investment volatility?
+    - Should I invest in safe assets during inflation?
+    - What are defensive stocks?
+    - What are cyclical stocks?
+    - How do I hedge against currency risk?
+    - How does leverage increase risk?
+    - What are the risks of investing in cryptocurrency?
+    - What is the biggest risk in stock trading?
+    - How does time horizon affect risk?
+    - What is a risk-free rate of return?
+    - What is standard deviation in risk measurement?
+    - How do alternative investments affect risk exposure?
+    - What is the role of risk assessment in financial planning?
+    - How does over-diversification impact returns?
+    - What is black swan risk in finance?
+    - How do behavioral biases impact risk-taking in investments?
+    - How do credit ratings impact bond risk?
+    - What are structured products and their risks?
+    - How do I analyze the risk of IPO investments?
+    - How does margin trading increase risk?
+    - Should I avoid investing in volatile stocks?
+    - How does geopolitical risk affect international investments?
+    - What is counterparty risk in derivatives trading?
+    - What is systemic risk vs. systematic risk?
+    - How do I assess risk in mutual funds?
+    - What is the impact of corporate governance on investment risk?
+    - What are the risks of private equity investments?
+    - How does company debt affect investment risk?
+    - Should I invest in foreign markets? What are the risks?
+    - What is sovereign risk?
+    - What is the risk associated with real estate investing?
+    - How do I manage risk in portfolio diversification?
+    - What are the risks of investing in gold?
+    - What are inflation-linked bonds?
+    - What are the risks of investing in startups?
+    - How do political events impact stock market risks?
+    - Should I invest in emerging markets? What are the risks?
+    - What is tail risk in investing?
+    - What are the risks of passive vs. active investing?
+    - How do I measure the risk of sector-specific investments?
+    - What is risk parity investing?
+    - How do bond yields impact risk?
+    - What is market timing risk?
+    - How do corporate earnings impact investment risk?
+    - What is the risk of holding too much cash?
+    - What are asymmetric risks in investing?
+    - How do stock market corrections affect risk exposure?
+    - How do I assess risk in retirement planning?
+    - What is default risk in bond investing?
+    - How do I identify red flags in a company’s financials?
+    - How does economic uncertainty affect risk-taking?
+    - Should I take on more risk in a bull market?
+    - How do I hedge against economic downturns?
+    - How does financial leverage impact investment risk?
+    - How do derivatives help in risk management?
+    - What is risk aversion in investing?
+    - How does behavioral finance impact risk perception?
+    - How do macroeconomic indicators predict financial risk?
+    - What are risk-adjusted investment strategies?
+
 
 - intent: ask_tax_saving
   examples: |
@@ -175,11 +993,79 @@ nlu:
     - What are the tax benefits of NPS?
     - Should I invest in PPF for tax savings?
     - What are the best tax-free investments?
-    - How do I plan for my retirement?
-    - What is the best pension plan in India?
-    - How much should I save for retirement?
-    - Can you explain the difference between EPF and PPF?
-    - Should I choose an annuity plan for retirement?
+    - How much tax can I save under Section 80C?
+    - What is the maximum tax deduction allowed under 80C?
+    - Which investments qualify for tax deductions?
+    - How does tax-saving FD compare to ELSS?
+    - Can I claim a deduction for home loan interest?
+    - What is the tax exemption on health insurance under 80D?
+    - How does HRA help in tax saving?
+    - What are the tax benefits of ULIP?
+    - Can I claim tax benefits on education loans?
+    - What are the tax exemptions for senior citizens?
+    - How do I calculate tax liability after deductions?
+    - Are there any tax-saving options for NRIs?
+    - How does the new tax regime affect my tax savings?
+    - Can I claim both 80C and 80D deductions?
+    - What is the difference between the old and new tax regime?
+    - How can I save tax if I am a salaried employee?
+    - What are the tax-saving options for self-employed professionals?
+    - Can I claim a tax deduction for charity donations?
+    - How do I maximize my tax benefits using HUF?
+    - What are the tax exemptions for rental income?
+    - Can I claim LTC as a tax-free component?
+    - How do capital gains tax exemptions work?
+    - What are the tax-saving benefits of investing in mutual funds?
+    - Is NPS better than PPF for tax saving?
+    - How do I save tax on capital gains?
+    - What is the 54EC exemption for capital gains tax?
+    - How does the 80CCD deduction work for NPS?
+    - What is the tax-free return limit on EPF withdrawals?
+    - Can I claim tax deductions for home loan principal repayment?
+    - How can I save tax using a salary structure?
+    - What is the tax benefit of the Sukanya Samriddhi Yojana?
+    - How can I save tax on rental income?
+    - What is the tax deduction limit for medical expenses?
+    - Can I claim tax benefits on car loans?
+    - How do I save tax while filing ITR?
+    - What is the tax treatment of dividends in mutual funds?
+    - How do tax-free bonds work?
+    - What is the tax implication of selling property in India?
+    - How do I save tax on gratuity?
+    - Can I claim a deduction for house rent if I own a house?
+    - Are ESOPs taxable?
+    - How do I save tax under Section 80GG?
+    - What is the standard deduction for salaried individuals?
+    - How does the 80EE deduction work for first-time home buyers?
+    - What are the tax benefits of employer-provided benefits?
+    - How do I save tax if I earn from freelancing?
+    - Can I claim tax deductions for startup investments?
+    - How can I save tax while withdrawing EPF?
+    - What is the tax-free limit for gifts in India?
+    - How do I save tax using LTA?
+    - What is the tax implication of inherited property?
+    - How do I claim a deduction for tuition fees?
+    - What are the tax benefits of investing in gold?
+    - Can I claim tax benefits on joint home loans?
+    - What is the tax implication of selling stocks?
+    - How does Section 80E work for student loans?
+    - How does tax harvesting work in mutual funds?
+    - How can I save tax using business expenses?
+    - What is the tax-free interest limit on savings accounts?
+    - How does capital loss adjustment help in tax saving?
+    - Are agricultural incomes taxable in India?
+    - Can I claim deductions for medical bills under 80D?
+    - How does tax planning differ from tax evasion?
+    - What is the tax exemption limit for retirement gratuity?
+    - How does indexation help in saving tax on capital gains?
+    - What are the tax implications of an FD?
+    - What are the tax-free government savings schemes?
+    - How do tax-free bonds differ from corporate bonds?
+    - Can I claim tax exemption on voluntary PF contributions?
+    - How does 80G tax deduction
+    - What are the tax benefits of investing in real estate?
+    - How do I save tax on capital gains using a tax-free account?
+    - What is the tax-free limit for charitable donations?
 
 - intent: ask_crypto_investments
   examples: |
@@ -192,6 +1078,101 @@ nlu:
     - Should I invest in NFTs?
     - What are the safest ways to invest in cryptocurrency?
     - Can you suggest any alternative investments?
+    - What is the future of Bitcoin?
+    - How do I buy cryptocurrency in India?
+    - Is crypto banned in India?
+    - What is the best cryptocurrency to invest in?
+    - How can I store my crypto safely?
+    - Are stablecoins a good investment?
+    - What are the tax implications of crypto trading?
+    - What is the best platform to buy crypto in India?
+    - How do I secure my crypto wallet?
+    - Is it better to invest in Bitcoin or altcoins?
+    - What are the advantages of decentralized finance (DeFi)?
+    - Can I lose all my money in crypto?
+    - How does staking work in cryptocurrency?
+    - What is the safest way to store Bitcoin?
+    - Should I invest in meme coins like Dogecoin or Shiba Inu?
+    - How do I analyze crypto market trends?
+    - What is a hardware wallet, and do I need one?
+    - Are there any government regulations on crypto in India?
+    - How does crypto mining work?
+    - Is it safe to invest in new ICOs?
+    - What are the risks of investing in NFTs?
+    - How do I withdraw crypto to INR in India?
+    - How does crypto taxation work under the new rules?
+    - What are gas fees in Ethereum?
+    - Can I earn passive income with crypto?
+    - How do I avoid crypto scams?
+    - What are some popular altcoins to invest in?
+    - What is a smart contract in blockchain?
+    - How do I track my crypto portfolio?
+    - Is crypto investing better than stock market investing?
+    - Should I invest in Bitcoin for the long term?
+    - What are the benefits of using a decentralized exchange?
+    - How do crypto loans work?
+    - What is the difference between Bitcoin and Ethereum?
+    - What is the best strategy for crypto trading?
+    - Should I hold or sell my crypto during a market crash?
+    - What is a crypto airdrop?
+    - How do I avoid high transaction fees in crypto?
+    - Can I use crypto for international transactions?
+    - What are the risks of using centralized exchanges?
+    - How does crypto arbitrage trading work?
+    - How do I buy Bitcoin in India legally?
+    - What are the safest cryptocurrency exchanges?
+    - What are the risks of keeping crypto on an exchange?
+    - Is it possible to trade crypto without KYC?
+    - What is the future of Ethereum after the merge?
+    - What is the best way to dollar-cost average into crypto?
+    - How do I invest in metaverse tokens?
+    - Are there any Indian banks that support crypto transactions?
+    - How does taxation differ for long-term and short-term crypto holdings?
+    - Can I buy Bitcoin with a credit card in India?
+    - How do crypto lending platforms work?
+    - How do I read a crypto candlestick chart?
+    - How do I know if a crypto project is a scam?
+    - What are the best Telegram groups for crypto signals?
+    - How does token burning work in cryptocurrency?
+    - What is a crypto bear market?
+    - What is the impact of global regulations on crypto prices?
+    - Can I use crypto for everyday purchases in India?
+    - How do I stake Ethereum?
+    - What is the difference between proof-of-work and proof-of-stake?
+    - How can I trade crypto futures in India?
+    - What is DeFi, and how can I invest in it?
+    - What are the biggest risks of investing in crypto?
+    - Is Bitcoin mining profitable in India?
+    - Should I invest in crypto during a bull market?
+    - How does leverage trading in crypto work?
+    - How do I find undervalued crypto projects?
+    - What is a whitepaper in cryptocurrency?
+    - Can I send crypto from India to another country?
+    - What happens if I lose access to my crypto wallet?
+    - What is a decentralized autonomous organization (DAO)?
+    - Is it possible to recover stolen crypto?
+    - What is the role of NFTs in the crypto ecosystem?
+    - What is an Initial DEX Offering (IDO)?
+    - How does tokenomics affect a cryptocurrency's value?
+    - Are crypto gains taxed in India?
+    - What is a wrapped token in crypto?
+    - How do I start yield farming in crypto?
+    - What is a rug pull in crypto?
+    - Should I invest in Layer 2 solutions like Polygon?
+    - How do I move my crypto to a cold wallet?
+    - What is the Lightning Network for Bitcoin?
+    - Is there any insurance for crypto investments?
+    - What are the risks of crypto staking?
+    - How do I calculate capital gains tax on crypto in India?
+    - What is a smart contract audit, and why is it important?
+    - Can I invest in crypto using UPI in India?
+    - How do I convert my crypto to stablecoins?
+    - What are the benefits of using Binance over other exchanges?
+    - How can I hedge against crypto market volatility?
+    - What is the difference between utility tokens and security tokens?
+    - How do I protect my crypto from hacks?
+    - Should I follow crypto influencers for investment advice?
+
 
 - intent: ask_loan_guidance
   examples: |
@@ -202,6 +1183,103 @@ nlu:
     - Is taking a business loan a good idea?
     - Should I pay off my loan early?
     - What is the difference between secured and unsecured loans?
+    - What are the best home loan options in India?
+    - How can I get a low-interest personal loan?
+    - What is the minimum credit score required for a loan?
+    - How do I calculate my loan EMI?
+    - Which banks offer the lowest home loan rates?
+    - How does a loan against property work?
+    - Is it better to take a fixed or floating interest rate loan?
+    - What are the risks of taking a loan?
+    - Should I take a car loan or buy with cash?
+    - How do I negotiate better loan terms with a bank?
+    - What are the benefits of taking a gold loan?
+    - Can I get a loan if I have a low credit score?
+    - How does a top-up loan work?
+    - What documents are required for a home loan?
+    - What is the processing fee for personal loans?
+    - Is it good to take a loan against mutual funds?
+    - How can I check my eligibility for a personal loan?
+    - What are the advantages of a balance transfer on loans?
+    - How does loan foreclosure work?
+    - What is a pre-approved loan?
+    - What are the tax benefits of a home loan?
+    - Should I go for a long-term or short-term loan?
+    - What happens if I miss my loan EMI payment?
+    - How do I increase my chances of getting a loan?
+    - What are the benefits of a government-backed loan?
+    - Is a business loan better than a personal loan for entrepreneurs?
+    - What is a co-applicant in a loan?
+    - How can I get an instant personal loan online?
+    - Should I take a top-up loan on my existing home loan?
+    - What is a debt consolidation loan?
+    - How do I compare different loan offers?
+    - Can I get a loan without income proof?
+    - What happens if I default on a loan?
+    - What are the penalties for late loan payments?
+    - Should I use a credit card loan or a personal loan?
+    - What are the pros and cons of taking a payday loan?
+    - How can I refinance my home loan?
+    - How much home loan can I afford?
+    - How does a moratorium period affect loan repayment?
+    - What is a microfinance loan?
+    - Can I get a personal loan without a salary slip?
+    - What is the impact of debt on my financial health?
+    - How do I get a student loan without collateral?
+    - What are the different types of business loans?
+    - What is the tenure range for a car loan?
+    - How does an EMI holiday work?
+    - What are the benefits of an overdraft loan?
+    - Should I take a personal loan for investment purposes?
+    - How do banks calculate my loan eligibility?
+    - Can I transfer my loan to another bank?
+    - What is a green loan?
+    - Should I take a loan for wedding expenses?
+    - What are the hidden charges in personal loans?
+    - Can I prepay my education loan?
+    - What is a reverse mortgage, and who can apply?
+    - How does the interest rate vary for different types of loans?
+    - How do I apply for a business loan with no credit history?
+    - What are the requirements for an MSME loan?
+    - Should I take a home loan or rent a house?
+    - How do I get a two-wheeler loan?
+    - What is an agricultural loan?
+    - Can I take multiple loans at the same time?
+    - How do I calculate the total cost of a loan?
+    - Is taking a joint loan a good idea?
+    - What is an LTV ratio in a home loan?
+    - Can I get a loan if I am self-employed?
+    - Should I use a personal loan for home renovation?
+    - What is the repayment tenure for an education loan?
+    - What happens if I settle a loan instead of repaying it?
+    - What is the best time to apply for a home loan?
+    - Should I use my savings instead of taking a loan?
+    - What are the RBI regulations on loans in India?
+    - How do I get a government-subsidized education loan?
+    - What are the eligibility criteria for a startup loan?
+    - Can I take a loan against my insurance policy?
+    - How can I check my CIBIL score for free?
+    - What are the advantages of a credit line over a personal loan?
+    - Should I take a loan from NBFCs or banks?
+    - How do I get a travel loan?
+    - What is the difference between term loans and working capital loans?
+    - Can I get a personal loan without collateral?
+    - How do I select the best lender for my loan?
+    - Should I opt for an EMI-based or lump sum repayment loan?
+    - What happens if my loan application is rejected?
+    - Can I get a government loan for a small business?
+    - What is a loan restructuring, and when should I opt for it?
+    - How does GST affect business loan eligibility?
+    - How do I get a loan with no credit history?
+    - Can I increase my loan amount after approval?
+    - How do I find the best bank for home loans?
+    - What is a loan sanction letter?
+    - What is the process of loan disbursement?
+    - Should I take a personal loan to pay off credit card debt?
+    - What are the requirements for a student loan?
+    - How do I get a loan for a home improvement project?
+    - What are the requirements for a business loan?
+
 
 - intent: ask_insurance_guidance
   examples: |
@@ -213,6 +1291,60 @@ nlu:
     - What is the difference between term insurance and whole life insurance?
     - Should I get critical illness insurance?
     - What are the best car insurance options?
+    - What is the best health insurance plan in India?
+    - Should I get individual or family health insurance?
+    - Which is better: cashless or reimbursement health insurance?
+    - What is the difference between Mediclaim and health insurance?
+    - How does Ayushman Bharat health insurance work?
+    - What is the waiting period in health insurance?
+    - Does health insurance cover pre-existing diseases?
+    - How do I claim cashless hospitalization in India?
+    - Which are the top health insurance providers in India?
+    - What happens if I miss paying my health insurance premium?
+    - Can I have multiple health insurance policies?
+    - What is the maximum tax benefit on health insurance under Section 80D?
+    - How does a No Claim Bonus (NCB) work in health insurance?
+    - What is term life insurance, and is it worth it?
+    - How much life insurance coverage do I need?
+    - What are the best term insurance policies in India?
+    - Should I buy a term plan with a return of premium?
+    - What happens if I stop paying my life insurance premium?
+    - Can NRIs buy life insurance in India?
+    - What is the claim settlement ratio in life insurance?
+    - How do I choose the best life insurance company in India?
+    - What are the tax benefits of life insurance under Section 10(10D)?
+    - How do I check my life insurance policy status?
+    - Can I take a loan against my life insurance policy?
+    - What happens if I outlive my term insurance policy?
+    - What is third-party car insurance?
+    - Should I buy a comprehensive car insurance policy?
+    - Which car insurance company has the best claim settlement ratio in India?
+    - How do I renew my car insurance online?
+    - What is the penalty for driving without car insurance in India?
+    - How does a No Claim Bonus (NCB) work in car insurance?
+    - Is zero depreciation car insurance worth it?
+    - Can I transfer my car insurance when I sell my car?
+    - What is IDV (Insured Declared Value) in car insurance?
+    - How do I file a claim for a car accident in India?
+    - Is ULIP a good investment option in India?
+    - What are the benefits of investing in ULIPs?
+    - How does the lock-in period work in ULIPs?
+    - What is the difference between ULIP and mutual funds?
+    - Are ULIPs better than fixed deposits?
+    - Should I get home insurance in India?
+    - What does home insurance cover?
+    - How much does home insurance cost in India?
+    - Can I insure my house against natural disasters?
+    - What is the best home insurance policy in India?
+    - Should I buy critical illness insurance?
+    - What diseases are covered under critical illness insurance?
+    - How does personal accident insurance work?
+    - What is disability insurance, and do I need it?
+    - Should I buy travel insurance for international trips?
+    - Does travel insurance cover flight cancellations?
+    - What are the best travel insurance companies in India?
+    - How do I claim travel insurance for lost baggage?
+
 
 - intent: ask_real_estate_investments
   examples: |
@@ -221,6 +1353,100 @@ nlu:
     - What are REITs?
     - How does real estate investment work?
     - What are the risks in real estate investing?
+    - Should I invest in commercial or residential real estate?
+    - What is the best city in India for real estate investment?
+    - How do real estate prices appreciate over time?
+    - What are the tax benefits of investing in real estate?
+    - How do I get a home loan for real estate investment?
+    - Is it better to invest in land or apartments?
+    - How does rental yield work?
+    - What factors should I consider before buying a property?
+    - How do I check property documents before buying?
+    - What is stamp duty and registration cost?
+    - Can NRIs invest in Indian real estate?
+    - What is fractional ownership in real estate?
+    - How do I generate passive income from real estate?
+    - Is buying property better than stock market investments?
+    - What is the future of real estate investment in India?
+    - What are some good real estate investment strategies?
+    - How much down payment do I need to buy property?
+    - Is real estate better than gold investment?
+    - What is the role of inflation in real estate?
+    - Should I invest in real estate in metro cities?
+    - What are some government schemes for real estate investors?
+    - How do I find undervalued properties?
+    - What is the best way to finance a real estate investment?
+    - Can I invest in real estate with low capital?
+    - How does location impact real estate value?
+    - What are the top real estate trends in India?
+    - What is co-living, and is it a good investment?
+    - How do I calculate ROI on real estate investments?
+    - What are the best states in India for real estate?
+    - Is it smart to invest in real estate during a recession?
+    - Should I buy pre-launch or ready-to-move properties?
+    - How do I invest in real estate without owning property?
+    - What is real estate flipping?
+    - Is rental property a good long-term investment?
+    - What are the benefits of investing in vacation rentals?
+    - What is a real estate syndicate?
+    - Should I invest in farmhouses?
+    - What are the legal risks in real estate investing?
+    - How do I diversify my real estate portfolio?
+    - Should I buy property near upcoming infrastructure projects?
+    - What is the role of FDI in Indian real estate?
+    - How do I choose between builder floors and apartments?
+    - Should I invest in old or newly constructed properties?
+    - What are the best real estate investment opportunities for beginners?
+    - How do I find reliable tenants for rental property?
+    - What are the benefits of leasing vs. selling property?
+    - How do I evaluate a real estate investment deal?
+    - How much rental yield should I expect?
+    - What is the best way to invest in real estate for passive income?
+    - Should I invest in luxury real estate?
+    - How do I negotiate real estate prices?
+    - What are the top real estate investment mistakes to avoid?
+    - How do real estate crowdfunding platforms work?
+    - Should I invest in real estate abroad?
+    - What are the top real estate investment books I should read?
+    - Is it better to buy a house or invest in mutual funds?
+    - What is the process of registering a property in India?
+    - How does RERA protect home buyers?
+    - What are the benefits of investing in plots?
+    - What is the impact of interest rates on real estate?
+    - How can I use real estate for wealth building?
+    - What are the best tools for real estate market analysis?
+    - Should I buy property in a developing or established area?
+    - What is the best way to sell a property fast?
+    - How do I evaluate the future potential of a location?
+    - What are the benefits of a gated community investment?
+    - How do I invest in real estate for short-term profits?
+    - How does depreciation affect real estate investments?
+    - What are the advantages of investing in a second home?
+    - Should I buy a house with a home loan or save and buy later?
+    - What are the key factors in commercial real estate investing?
+    - How do I invest in industrial real estate?
+    - What are the risks of investing in real estate through loan leverage?
+    - How do I track real estate market trends?
+    - What are the best real estate investment courses?
+    - How do I get started with rental arbitrage?
+    - What are the benefits of investing in a retirement home?
+    - How does taxation work for rental income?
+    - Should I invest in real estate near my workplace?
+    - What are some emerging real estate markets in India?
+    - How do I finance a real estate investment without a loan?
+    - Is it a good idea to buy an under-construction property?
+    - Should I buy a property for Airbnb rentals?
+    - What are the pros and cons of investing in a real estate fund?
+    - How do I legally protect my real estate investments?
+    - What is a leasehold vs. freehold property?
+    - What is the best way to market a rental property?
+    - How do I use real estate for tax planning?
+    - What are the best platforms to list properties for sale?
+    - Should I invest in mixed-use properties?
+    - How does urbanization impact real estate investments?
+    - What is the impact of economic cycles on real estate?
+    - How do I use technology for real estate investments?
+
 
 - intent: ask_gold_investments
   examples: |
@@ -229,15 +1455,206 @@ nlu:
     - Is digital gold a good investment?
     - What is the difference between physical gold and ETFs?
     - What is the current gold rate?
+    - Should I buy gold bars or coins for investment?
+    - How does gold perform as a hedge against inflation?
+    - Is it better to invest in gold or real estate?
+    - What are the tax implications of investing in gold in India?
+    - How do I check the purity of gold before buying?
+    - What is the difference between 24K and 22K gold?
+    - Can I buy gold online safely?
+    - What are the best platforms to buy digital gold?
+    - Is gold investment better than the stock market?
+    - How does global economic instability affect gold prices?
+    - Should I buy gold during a market crash?
+    - What are Sovereign Gold Bonds (SGBs)?
+    - How do I redeem Sovereign Gold Bonds?
+    - Are gold ETFs better than physical gold?
+    - How much gold should I have in my portfolio?
+    - What is the minimum amount required to invest in gold ETFs?
+    - Can NRIs invest in gold in India?
+    - What are the risks of investing in gold?
+    - Is gold a good investment for retirement planning?
+    - How does the Indian wedding season affect gold prices?
+    - Should I buy gold jewelry as an investment?
+    - What is the best time to buy gold?
+    - How do I store physical gold safely?
+    - What is the role of gold in wealth preservation?
+    - How does gold compare to silver as an investment?
+    - What is the historical trend of gold prices in India?
+    - Should I invest in gold bonds or gold mutual funds?
+    - How do I sell my gold for the best price?
+    - Is gold loan a good option for emergency cash?
+    - What is the process of taking a gold loan in India?
+    - How does gold mining affect gold prices?
+    - What is paper gold, and how does it work?
+    - Should I invest in gold mutual funds?
+    - What is the impact of interest rates on gold prices?
+    - Can I use gold as collateral for a loan?
+    - What factors drive gold price fluctuations?
+    - Is gold a good investment in 2025?
+    - How does the US dollar impact gold prices?
+    - Should I buy gold from banks or jewelers?
+    - What are gold futures and how do they work?
+    - Can I do intraday trading in gold?
+    - How does the demand for gold in India compare to other countries?
+    - Is investing in gold better than Bitcoin?
+    - How do I choose between gold ETFs and physical gold?
+    - How do I track gold market trends?
+    - What are some strategies for investing in gold?
+    - Can I invest in gold through SIP?
+    - Should I buy gold when the stock market is down?
+    - Is investing in gold better than keeping cash in the bank?
+    - What is the role of gold in central bank reserves?
+    - How does inflation impact gold investments?
+    - What is the difference between gold coins and gold biscuits?
+    - Should I invest in gold mining stocks?
+    - How does geopolitical tension affect gold prices?
+    - How can I start investing in gold with a small budget?
+    - What are the benefits of holding physical gold?
+    - How do I convert gold jewelry into investment-grade gold?
+    - Is it better to buy gold in India or abroad?
+    - What are the customs duties on importing gold into India?
+    - How does RBI influence gold prices in India?
+    - Can I include gold in my retirement portfolio?
+    - What are the government rules on gold investment in India?
+    - How do I transfer ownership of gold investments?
+    - What is the best way to track gold price movements?
+    - What are the major gold-producing countries?
+    - Should I invest in silver or gold?
+    - How do global economic recessions affect gold prices?
+    - Is it safe to invest in gold during high inflation?
+    - What are gold-backed cryptocurrencies?
+    - How do I withdraw my investment in digital gold?
+    - Should I invest in gold as a short-term or long-term asset?
+    - What are the charges associated with buying digital gold?
+    - Is buying gold from a pawn shop a good idea?
+    - How does demand and supply affect gold rates?
+    - Should I buy gold jewelry on Dhanteras?
+    - What is hallmarking, and why is it important for gold?
+    - How does festive season impact gold prices in India?
+    - Can I invest in international gold markets?
+    - Should I invest in gold-based mutual funds?
+    - How does gold compare to platinum as an investment?
+    - What are the drawbacks of investing in physical gold?
+    - How does the economic growth of India affect gold prices?
+    - Should I buy gold when the rupee is weak?
+    - Can gold prices be predicted accurately?
+    - What are the key indicators of gold price movements?
+    - What is a gold accumulation plan?
+    - What happens to gold prices during a financial crisis?
+    - How does GST apply to gold purchases in India?
+    - What are the storage options for physical gold?
+    - Can I invest in gold in small amounts?
+    - Is gold a good hedge against currency devaluation?
+    - How do gold savings plans work?
+    - What are the major differences between gold ETFs and gold funds?
+    - Should I buy gold from Dubai or India?
+    - How does gold mining affect environmental sustainability?
+    - Can I pledge my gold for a loan?
+    - What happens to gold prices when the stock market crashes?
+    - What are the best strategies for trading gold?
+
 
 - intent: ask_goal_based_investment
   examples: |
-    - How do I save for my child’s education?
+    - How do I save for my children's education?
     - What is the best way to invest for a house?
     - Can you help me plan for retirement?
     - How much do I need to save for a vacation?
-    - What’s the best way to invest for my wedding?
+    - What is the best way to invest for my wedding?
     - How do I create a financial plan for the future?
+    - How much do I need to invest monthly for my child’s college?
+    - What is the best investment option for my dream home?
+    - Can I retire early with proper investments?
+    - What are the safest investment options for my long-term goals?
+    - Should I use SIPs for my retirement planning?
+    - How do I balance short-term and long-term financial goals?
+    - What is the best way to build wealth for my future?
+    - Can you help me with a financial roadmap for my life goals?
+    - How can I create a diversified investment plan?
+    - What percentage of my income should I save for future goals?
+    - Should I invest in mutual funds for my child's education?
+    - How do I invest for my parents' retirement?
+    - What is the best way to save for an international vacation?
+    - Should I buy property or invest in REITs for wealth building?
+    - How do I plan financially for my marriage?
+    - What is the best asset allocation for goal-based investing?
+    - Can you suggest a good investment strategy for passive income?
+    - How do I prepare financially for my startup dream?
+    - What are the best short-term investments for my honeymoon?
+    - Should I invest in stocks for long-term financial stability?
+    - How do I start goal-based investing with a low budget?
+    - Can you help me create an investment plan for my child’s future?
+    - What are the best investment options for financial independence?
+    - Should I invest in gold for my daughter’s wedding?
+    - How do I plan for buying my first car?
+    - Can I use PPF for my child’s future education expenses?
+    - Should I start a recurring deposit for my long-term goals?
+    - What is the best financial strategy for early retirement?
+    - How do I invest in my dream of world travel?
+    - How much should I save for my startup capital?
+    - What is the ideal savings rate for a secure future?
+    - How do I plan for a financially stress-free retirement?
+    - Can I achieve financial freedom through smart investments?
+    - Should I focus on real estate or stocks for long-term wealth?
+    - How can I maximize my returns for my wedding fund?
+    - What is the safest way to invest for my future?
+    - Should I invest in ETFs for my children's future?
+    - How do I set financial goals and stick to them?
+    - Can I save for both my retirement and a house simultaneously?
+    - What is the best way to save for my child's higher studies?
+    - How do I choose the right financial instrument for my goals?
+    - Should I put my savings in fixed deposits or mutual funds?
+    - How do I create a step-by-step investment plan?
+    - What are the best low-risk investments for my future plans?
+    - Should I take a loan or save money for a home purchase?
+    - How do I ensure financial security for my parents?
+    - What’s the best way to invest for financial emergencies?
+    - Can I plan for wealth accumulation with low-risk strategies?
+    - Should I invest in real estate for my long-term goals?
+    - How much should I allocate to equities for long-term goals?
+    - Should I buy gold or invest in stocks for my future needs?
+    - What investment options are best for early retirement?
+    - How do I make my money grow for my family’s future?
+    - Can I create a corpus for my child’s wedding through investing?
+    - How do I plan my savings for my dream vacation?
+    - Should I start a SIP for my future home down payment?
+    - How do I set SMART financial goals?
+    - What are the best investment strategies for high-net-worth goals?
+    - Should I invest in REITs for long-term wealth?
+    - What is the ideal mix of assets for financial planning?
+    - Can I save for my startup while also investing in retirement?
+    - How much of my salary should I save for future expenses?
+    - Should I invest in cryptocurrencies for long-term goals?
+    - What are the best options for goal-based portfolio management?
+    - How do I plan my investments if I want to retire by 40?
+    - How do I manage financial goals if I have multiple priorities?
+    - What are the best investment options for financial security?
+    - Should I use ELSS for goal-based tax saving and investing?
+    - How do I invest in bonds for future financial planning?
+    - What is the best savings instrument for my first house?
+    - Should I go for aggressive or conservative investments?
+    - How do I financially plan for a major life event?
+    - Should I use index funds for long-term goal investing?
+    - Can I use gold investments for my daughter’s marriage?
+    - What’s the best way to secure my family's financial future?
+    - How do I create a systematic investment approach for my future?
+    - Should I open a fixed deposit for goal-based savings?
+    - What are the best high-yield investments for future goals?
+    - Should I buy stocks or mutual funds for my future plans?
+    - How do I decide my asset allocation for my financial goals?
+    - What is the best long-term wealth-building strategy?
+    - Can I invest in real estate and stocks together for my goals?
+    - How do I protect my investments from inflation?
+    - What is the best way to pass wealth to my children?
+    - Should I invest in a pension plan for retirement?
+    - How do I build a safety net for unexpected financial needs?
+    - Should I invest in dividend stocks for goal-based investing?
+    - How do I ensure my savings keep up with inflation?
+    - How do I handle financial planning when my salary increases?
+    - What is the best way to invest my bonus for long-term goals?
+    - How do I structure my investments for multiple future needs?
+
 
 - intent: ask_emergency_fund
   examples: |
@@ -246,6 +1663,100 @@ nlu:
     - How do I save for unexpected expenses?
     - Why is an emergency fund important?
     - Should I invest my emergency savings?
+    - How do I start an emergency fund?
+    - How many months of expenses should I save?
+    - Is an emergency fund necessary?
+    - Can I use my credit card instead of an emergency fund?
+    - How do I calculate my ideal emergency fund amount?
+    - Where should I keep my emergency savings?
+    - Should I keep my emergency fund in a fixed deposit?
+    - Can I use a high-yield savings account for my emergency fund?
+    - What are the best places to store an emergency fund?
+    - How fast should I build my emergency savings?
+    - How can I save for an emergency fund while paying off debt?
+    - What percentage of my salary should go to my emergency fund?
+    - Should I use mutual funds for my emergency savings?
+    - How do I make sure my emergency fund is accessible?
+    - Can I invest my emergency fund in stocks?
+    - What happens if I don't have an emergency fund?
+    - How do I manage an emergency fund with a low income?
+    - Should I build an emergency fund before investing?
+    - How do I replenish my emergency fund after using it?
+    - What are some easy ways to build an emergency fund?
+    - How do I automate my emergency savings?
+    - Should I put my emergency fund in gold?
+    - How do I prepare for financial emergencies?
+    - How much emergency savings do I need if I'm self-employed?
+    - Should I keep emergency savings in cash at home?
+    - How do I balance saving for emergencies and retirement?
+    - Can I use my emergency fund for medical expenses?
+    - What are the common mistakes people make with emergency funds?
+    - How do I build an emergency fund quickly?
+    - Should I use liquid funds for my emergency savings?
+    - Can I keep my emergency fund in my regular bank account?
+    - How do I keep my emergency fund separate from other savings?
+    - Should I prioritize an emergency fund over paying loans?
+    - What is the best way to increase my emergency fund?
+    - Should my emergency fund include rent and bills?
+    - Can I use a recurring deposit for my emergency fund?
+    - What should I do if I have no savings for emergencies?
+    - How do I save for emergencies on a tight budget?
+    - Is ₹1 lakh a good emergency fund amount?
+    - Can I use my emergency fund for vacations?
+    - How do I make my emergency fund grow?
+    - Should I put my emergency fund in a money market account?
+    - How do I keep my emergency fund inflation-proof?
+    - How do I adjust my emergency savings over time?
+    - What should be the minimum amount in my emergency fund?
+    - How do I avoid spending my emergency fund?
+    - Is it okay to use my emergency fund for a big purchase?
+    - Should I have a separate emergency fund for medical expenses?
+    - Can I take a loan instead of having an emergency fund?
+    - What are the best apps for tracking emergency savings?
+    - Should I increase my emergency fund if I have kids?
+    - Is a ₹50,000 emergency fund enough?
+    - How do I save for an emergency fund while earning a low salary?
+    - Can I keep my emergency fund in a savings bond?
+    - How do I decide between an emergency fund and an FD?
+    - What percentage of my emergency fund should be in cash?
+    - Should I use my bonus to build my emergency fund?
+    - How do I recover my emergency savings after using them?
+    - How do I protect my emergency fund from inflation?
+    - Should I have different emergency funds for different needs?
+    - How do I decide how much emergency savings I need?
+    - Is it a good idea to use a digital wallet for my emergency fund?
+    - How do I handle an unexpected expense without an emergency fund?
+    - Should my emergency fund be in my salary account?
+    - Can I use an emergency fund for home repairs?
+    - How do I balance my emergency savings with my investment goals?
+    - What are the risks of not having an emergency fund?
+    - Should I build an emergency fund before buying insurance?
+    - Can I use my emergency fund for education expenses?
+    - Should I have an emergency fund in multiple accounts?
+    - How do I track my emergency fund progress?
+    - Should my emergency fund cover job loss expenses?
+    - Can I withdraw from my PPF for emergencies?
+    - How do I budget for emergency fund contributions?
+    - Should I use an insurance policy instead of an emergency fund?
+    - Is a liquid emergency fund better than a fixed deposit?
+    - How do I use a side hustle to build my emergency fund?
+    - What happens if my emergency fund runs out?
+    - Should I keep my emergency fund separate from my spouse’s?
+    - How do I handle an emergency fund if I have irregular income?
+    - Can I use my emergency fund to pay off credit card debt?
+    - What’s the best strategy for withdrawing from an emergency fund?
+    - Should I split my emergency fund across different accounts?
+    - Is an emergency fund the same as a contingency fund?
+    - How do I plan an emergency fund if I live paycheck to paycheck?
+    - Can I use an emergency fund to invest during a market crash?
+    - Should I build an emergency fund in another currency if I travel a lot?
+    - How do I grow my emergency fund passively?
+    - Can I put my emergency fund in a foreign bank?
+    - What’s the best way to manage an emergency fund for a family?
+    - Should I save for an emergency fund before buying a house?
+    - How do I handle emergency savings if I have fluctuating expenses?
+    - How do I make sure I never have to use my emergency fund?
+
 
 - intent: ask_debt_management
   examples: |
@@ -253,7 +1764,103 @@ nlu:
     - What is the best way to clear credit card debt?
     - How can I manage multiple loans?
     - Should I pay off my mortgage early?
-    - How do I reduce my financial stress? 
+    - How do I reduce my financial stress?
+    - What is the best debt repayment strategy?
+    - Should I prioritize paying off student loans or credit card debt?
+    - How does debt consolidation work?
+    - Is taking a personal loan to pay off debt a good idea?
+    - What is the snowball method for paying off debt?
+    - Can you explain the avalanche method for debt repayment?
+    - How do I negotiate lower interest rates on my loans?
+    - What happens if I default on my loan?
+    - Should I use my emergency fund to pay off debt?
+    - How do I rebuild my credit after paying off debt?
+    - What is a debt settlement, and should I consider it?
+    - How do I avoid falling into debt again?
+    - Should I pay off debt or invest first?
+    - What are some tips for budgeting while paying off debt?
+    - Can I negotiate a settlement with my credit card company?
+    - How does debt affect my credit score?
+    - What is the best way to pay off medical debt?
+    - How can I pay off a large loan with a low income?
+    - Should I take out a new loan to clear old debt?
+    - How do I get out of debt if I'm living paycheck to paycheck?
+    - How does missing an EMI affect my financial future?
+    - Is it better to pay the minimum or clear my credit card balance?
+    - Can I use my investments to pay off my debts?
+    - Should I borrow money from friends or family to pay off debt?
+    - How can I pay off my car loan faster?
+    - How do I reduce my overall loan burden?
+    - What happens if I stop paying my credit card bills?
+    - Should I refinance my home loan to pay off debt?
+    - What is a good debt-to-income ratio?
+    - How does credit counseling work?
+    - How do I track my debts effectively?
+    - Can debt settlement companies really help?
+    - Should I close my credit card after paying off debt?
+    - How does debt impact my ability to get a home loan?
+    - What are the risks of loan restructuring?
+    - Should I use my bonus to pay off debt?
+    - What are the biggest mistakes people make when paying off debt?
+    - How do I handle debt if I lose my job?
+    - Is it a good idea to take a balance transfer credit card?
+    - How can I avoid high-interest loans?
+    - Should I prepay my loan or invest the extra money?
+    - Can I negotiate a lower settlement for my personal loan?
+    - How do I avoid getting trapped in payday loans?
+    - How do I create a debt repayment plan?
+    - How can I increase my income to pay off debt faster?
+    - What should I do if my debts are overwhelming me?
+    - Should I use a debt consolidation loan?
+    - What’s the best way to manage debt with rising interest rates?
+    - How do I prevent my debts from going to collections?
+    - How does bankruptcy affect my financial future?
+    - What are the pros and cons of debt consolidation?
+    - How do I prioritize paying off multiple loans?
+    - Can I pay off a loan before the tenure ends?
+    - How do I negotiate a lower EMI for my loan?
+    - What should I do if I have no money to pay my debts?
+    - Should I use my savings to clear my debt?
+    - How do I handle debt collectors?
+    - Can I convert my credit card debt into EMIs?
+    - How does inflation impact debt repayment?
+    - How do I deal with a co-signed loan if the other person defaults?
+    - Is it a good idea to take a loan to clear credit card dues?
+    - Should I take a gold loan to clear other debts?
+    - How can I build better financial habits to stay out of debt?
+    - Should I use a credit card while I am in debt?
+    - How do I stop accumulating debt?
+    - What is a debt relief program?
+    - How can I clear my student loans faster?
+    - Is taking a top-up loan a good idea?
+    - Should I consolidate my debts into a home loan?
+    - How do I handle rising EMI payments?
+    - Can I negotiate with my bank for a loan settlement?
+    - How does loan restructuring work?
+    - Should I take a side hustle to clear my debts?
+    - How do I stop overspending and accumulating debt?
+    - Should I increase my EMI to pay off my loan sooner?
+    - How do I handle debt if I am self-employed?
+    - What happens if I can’t pay off my home loan?
+    - Can I get a debt waiver in extreme situations?
+    - What are the best ways to clear small debts quickly?
+    - Should I refinance my car loan?
+    - How do I build an emergency fund while paying off debt?
+    - Is it smart to take a personal loan to clear my credit card balance?
+    - How do I avoid debt traps in personal loans?
+    - Should I take a family loan instead of a bank loan?
+    - How can I improve my financial discipline to pay off debt?
+    - What are the early repayment charges for loans?
+    - How do I handle a debt collector harassing me?
+    - Can I restructure my education loan if I can’t pay?
+    - What’s the best way to pay off my gold loan?
+    - Should I take a lower interest loan to pay off a high-interest one?
+    - How can I ensure I don’t take on unnecessary debt in the future?
+    - Should I focus on increasing my income or cutting expenses to pay debt?
+    - Can I negotiate a lower interest rate on my credit card debt?
+    - Should I use my tax refund to pay off my loans?
+    - What’s the smartest way to handle high-interest debt?
+
 
 - intent: ask_market_forecast
   examples: |
@@ -262,3 +1869,100 @@ nlu:
     - What are the latest investment trends?
     - Can you predict stock prices?
     - What sectors will grow in the future?
+    - What is the outlook for the Indian stock market?
+    - How will global inflation impact the markets?
+    - What are the best sectors to invest in right now?
+    - How does the Fed's decision impact the stock market?
+    - Will the NIFTY 50 rise or fall this month?
+    - What are analysts saying about the Sensex?
+    - What will be the impact of a recession on stocks?
+    - Is it a good time to invest in equity markets?
+    - How will crude oil prices affect the stock market?
+    - What are the long-term trends for gold prices?
+    - Should I invest in IT stocks for the future?
+    - What is the forecast for real estate investment?
+    - How will geopolitical events affect the market?
+    - What is the prediction for small-cap stocks this year?
+    - How will upcoming elections affect the stock market?
+    - What is the future of electric vehicle (EV) stocks?
+    - Is the banking sector a good investment in the long run?
+    - What will happen to the Indian rupee in the coming months?
+    - Will interest rate hikes crash the stock market?
+    - How will foreign investments impact Indian markets?
+    - What is the forecast for the pharma sector?
+    - Is this a bull market or bear market?
+    - What are experts predicting about the global economy?
+    - Will artificial intelligence stocks perform well in the future?
+    - What’s the outlook for the semiconductor industry?
+    - Should I invest in renewable energy stocks?
+    - Will gold prices increase due to inflation?
+    - How will the real estate market perform in the next five years?
+    - What is the expected return on equity investments for next year?
+    - How do corporate earnings affect market predictions?
+    - What are the safest investments during a market downturn?
+    - Will the US recession affect Indian markets?
+    - Is it a good time to enter the stock market?
+    - How will the automobile industry perform in the future?
+    - What sectors should I avoid in 2025?
+    - What are the trends in the cryptocurrency market?
+    - Will Bitcoin prices rise or fall?
+    - How do market corrections affect long-term investors?
+    - What are the predictions for FMCG stocks?
+    - How does political instability affect stock markets?
+    - Will startups continue to attract venture capital?
+    - How does AI impact stock market forecasts?
+    - What is the long-term outlook for healthcare stocks?
+    - Should I invest in IPOs this year?
+    - What are the best sectors for long-term growth?
+    - How will global trade policies impact Indian markets?
+    - What are the signs of a market bubble?
+    - How do you forecast stock trends?
+    - What are the safest investments in a recession?
+    - Should I switch from equity to debt investments?
+    - What’s the future of cryptocurrency in India?
+    - Will the stock market crash this year?
+    - How do market experts predict trends?
+    - Is now a good time to invest in mutual funds?
+    - How will AI affect the financial markets?
+    - What’s the best way to hedge against market volatility?
+    - How will global conflicts impact stock markets?
+    - Will interest rate cuts boost the markets?
+    - What are the top investment opportunities this year?
+    - How does consumer demand affect market forecasts?
+    - Should I invest in defense sector stocks?
+    - What happens to the market if inflation rises?
+    - Will there be a bull run in 2025?
+    - Is gold a good hedge against market volatility?
+    - How will upcoming policy changes affect the stock market?
+    - Will the real estate sector grow in the next decade?
+    - Should I invest in fintech stocks?
+    - What’s the forecast for banking stocks in India?
+    - How will budget announcements impact stock markets?
+    - Should I invest in the stock market or real estate?
+    - How will foreign direct investments affect India?
+    - What’s the future of the steel and metal industry?
+    - Is it a good time to invest in commodities?
+    - What’s the impact of the global recession on India?
+    - Will crude oil prices affect airline stocks?
+    - How does GDP growth impact stock markets?
+    - What’s the future of logistics and e-commerce stocks?
+    - Will high inflation lead to a stock market crash?
+    - How does foreign exchange movement impact investments?
+    - What are the most promising growth industries?
+    - What is the best investment strategy during market uncertainty?
+    - Will the global economy recover in 2025?
+    - What’s the impact of government policies on stock prices?
+    - Should I move my investments to safer assets?
+    - How will India’s digital economy shape investment trends?
+    - What’s the outlook for the tourism and hospitality industry?
+    - Is this the right time to invest in blue-chip stocks?
+    - How will global economic slowdown affect India?
+    - What is the best strategy for investing in volatile markets?
+    - Should I invest in bonds if stock markets crash?
+    - How do I identify long-term winning stocks?
+    - Will the next tech boom create new investment opportunities?
+    - What industries will dominate the next decade?
+    - How will AI and automation impact stock markets?
+    - Is now a good time to invest in emerging markets?
+    - Should I diversify into global stocks?
+    - How do central bank policies affect market forecasts?

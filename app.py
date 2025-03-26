@@ -1,135 +1,119 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
-import requests
-import mysql.connector  
-from datetime import datetime, timezone
+import mysql.connector
+import bcrypt
+from flask_jwt_extended import create_access_token, jwt_required, JWTManager, get_jwt_identity
+import os
+from datetime import timedelta
+import logging
 
+# Initialize Flask app
 app = Flask(__name__)
-CORS(app)
 
-# MySQL database configuration
-db_config = {
-    "host": "localhost",
-    "user": "root",
-    "password": "Nim@Li0611",
-    "database": "chatbot"
-}
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
-RASA_SERVER_URL = "http://localhost:5005/webhooks/rest/webhook"
+# Configure JWT
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'default_secret_key')  # Use environment variable for production
+app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=1)  # Token expires in 1 hour
+jwt = JWTManager(app)
 
-@app.route('/chat', methods=['POST'])
-def chat():
+# Database connection (use environment variables for sensitive data)
+db = mysql.connector.connect(
+    host=os.getenv('DB_HOST', 'localhost'),
+    user=os.getenv('DB_USER', 'root'),
+    password=os.getenv('DB_PASSWORD', 'Nim@Li20062011'),
+    database=os.getenv('DB_NAME', 'chatbot_db')
+)
+cursor = db.cursor()
+
+# Signup Route
+@app.route('/signup', methods=['POST'])
+def signup():
     data = request.json
-    print(f"Received data: {data}")
-    user_message = data.get('message')
-    user_id = data.get('user_id')
-    conversation_id = data.get('conversation_id')
-
-    if not user_message or not user_id or not conversation_id:
-        return jsonify({"error": "No message, user_id, or conversation_id provided"}), 400
-
-    print(f"Recieved message from user {user_id} in conversation {conversation_id}: {user_message}")
-
-    #send message to rasa
-    response = requests.post(RASA_SERVER_URL, json={"sender": user_id, "message": user_message})
-
-    if response.status_code != 200:
-        print(f"Failed to send message to Rasa: {response.status_code}")
-        return jsonify({"error": "Failed to send message to Rasa"}), 500
     
-    rasa_response = response.json()
-    print(f"Recieved response from Rasa: {rasa_response}")
-
-    #Save user message and rasa response in database
-    save_chat_to_db(user_id, conversation_id, user_message, rasa_response[0]['text'])
-
-    return jsonify(rasa_response)
-
-def save_chat_to_db(user_id, conversation_id, user_message, rasa_response):
-    conn = mysql.connector.connect(**db_config)
-    cursor = conn.cursor()
-    cursor.execute("INSERT INTO chat_history (conversation_id, user_message, rasa_response, timestamp) VALUES (%s, %s, %s, %s)", (conversation_id, user_message, rasa_response, datetime.now(timezone.utc)))
-    conn.commit()
-    cursor.close()
-    conn.close()
-    print(f"Saved chat to DB: user_id={user_id}, conversation_id={conversation_id}, user_message={user_message}, rasa_response={rasa_response}")
-
-def get_chat_history(user_id, conversation_id):
-    conn = mysql.connector.connect(**db_config)
-    cursor = conn.cursor(dictionary=True)
-    cursor.execute("SELECT user_message, rasa_response FROM chat_history WHERE conversation_id = %s ORDER BY timestamp ASC", (conversation_id))
-    history = cursor.fetchall()
-    cursor.close()
-    conn.close()
-    print(f"Retrieved chat history from DB: user_id={user_id}, conversation_id={conversation_id}, history={history}")
-    return history
-
-@app.route('/history', methods=['GET'])
-def get_history():
-    user_id = request.args.get('user_id')
-    conversation_id = request.args.get('conversation_id')
-
-    if not user_id or not conversation_id:
-        return jsonify({"error": "No user_id or conversation_id provided"}), 400
-
-    history = get_chat_history(user_id, conversation_id)
-    return jsonify(history)
-
-@app.route('/new_conversation', methods=['POST'])
-def new_conversation():
-    data = request.json
-    user_id = data.get('user_id')
-
-    if not user_id:
-        return jsonify({"error": "No user_id provided"}), 400
-
-    conversation_id = str(datetime.now(timezone.utc).timestamp())
-
-    connection = mysql.connector.connect(**db_config)
-    cursor = connection.cursor()
-    cursor.execute("INSERT INTO conversations (user_id, conversation_id,timestamp) VALUES (%s, %s,%s)", (user_id, conversation_id, datetime.now(timezone.utc)))
-    connection.commit()
-    cursor.close()
-    connection.close()
-
-    return jsonify({"conversation_id": conversation_id})
-
-@app.route('/conversations', methods=['GET'])
-def get_conversations():
-    user_id = request.args.get('user_id')
-
-    if not user_id:
-        return jsonify({"error": "No user_id provided"}), 400
-
-    connection = mysql.connector.connect(**db_config)
-    cursor = connection.cursor(dictionary=True)
-    cursor.execute("SELECT conversation_id FROM conversations WHERE user_id = %s", (user_id,))
-    conversations = cursor.fetchall()
-    cursor.close()
-    connection.close()
-
-    return jsonify(conversations)
-
-@app.route('/conversation', methods=['DELETE'])
-def delete_conversation():
-    data = request.json
-    user_id = data.get('user_id')
-    conversation_id = data.get('conversation_id')
-
-    if not user_id or not conversation_id:
-        return jsonify({"error": "No user_id or conversation_id provided"}), 400
-
-    connection = mysql.connector.connect(**db_config)
-    cursor = connection.cursor()
-    cursor.execute("DELETE FROM chat_history WHERE conversation_id = %s", (conversation_id))
-    cursor.execute("DELETE FROM conversations WHERE conversation_id = %s", (conversation_id))
-    connection.commit()
-    cursor.close()
-    connection.close()
-
-    return jsonify({"message": "Conversation deleted successfully"})
-
-    if __name__ == '__main__':
-        app.run(host='0.0.0.0', port=5001, debug=True)
-
+    # Validate input data
+    if not all(key in data for key in ['name', 'email', 'username', 'password', 'age']):
+        return jsonify({"message": "Missing required fields"}), 400
     
+    name, email, username, password, age = data['name'], data['email'], data['username'], data['password'], data['age']
+    
+    # Enforce strong passwords (example: minimum length)
+    if len(password) < 8:
+        return jsonify({"message": "Password must be at least 8 characters long"}), 400
+    
+    # Validate age (must be an integer and above a certain threshold)
+    if not isinstance(age, int) or age < 0:
+        return jsonify({"message": "Age must be a positive integer"}), 400
+
+    hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+    
+    try:
+        cursor.execute("INSERT INTO users (name, email, username, password, age) VALUES (%s, %s, %s, %s, %s)",
+                       (name, email, username, hashed_password, age))
+        db.commit()
+        return jsonify({"message": "User registered successfully"}), 201
+    except mysql.connector.IntegrityError:
+        return jsonify({"message": "Username or email already exists"}), 400
+    except Exception as e:
+        logging.error(f"Error during signup: {e}")
+        return jsonify({"message": "An error occurred during signup"}), 500
+
+# Login Route (using only username and password)
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.json
+    
+    # Validate input data
+    if not all(key in data for key in ['username', 'password']):
+        return jsonify({"message": "Missing required fields"}), 400
+    
+    username, password = data['username'], data['password']
+    
+    try:
+        cursor.execute("SELECT * FROM users WHERE username=%s", (username,))
+        user = cursor.fetchone()
+        
+        if user and bcrypt.checkpw(password.encode('utf-8'), user[4].encode('utf-8')):
+            access_token = create_access_token(identity={"username": user[3], "name": user[1], "age": user[5]})  # Include age in token identity
+            return jsonify({
+                "message": "Login successful",
+                "token": access_token,
+                "user_details": {
+                    "name": user[1],
+                    "username": user[3],
+                    "age": user[5]
+                }
+            }), 200
+        else:
+            return jsonify({"message": "Invalid credentials"}), 401
+    except Exception as e:
+        logging.error(f"Error during login: {e}")
+        return jsonify({"message": "An error occurred during login"}), 500
+
+# Get User Details (Protected)
+@app.route('/user', methods=['GET'])
+@jwt_required()
+def get_user():
+    current_user = get_jwt_identity()
+    
+    try:
+        cursor.execute("SELECT name, email, username, age FROM users WHERE username=%s", (current_user['username'],))
+        user_info = cursor.fetchone()
+        
+        if user_info:
+            return jsonify({
+                "user": {
+                    "name": user_info[0],
+                    "email": user_info[1],
+                    "username": user_info[2],
+                    "age": user_info[3]  # Include age in the response
+                }
+            }), 200
+        else:
+            return jsonify({"message": "User not found"}), 404
+    except Exception as e:
+        logging.error(f"Error fetching user details: {e}")
+        return jsonify({"message": "An error occurred while fetching user details"}), 500
+
+if __name__ == '__main__':
+    app.run(debug=True)

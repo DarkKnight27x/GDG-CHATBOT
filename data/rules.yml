@@ -87,11 +87,6 @@ rules:
   - intent: ask_tax_saving
   - action: action_tax_saving_tips
 
-- rule: Answer Crypto Currency
-  steps:
-  - intent: ask_crypto_investments
-  - action: action_crypto_investment_advice
-
 - rule: Offer Loan Guidance
   steps:
   - intent:  ask_loan_guidance

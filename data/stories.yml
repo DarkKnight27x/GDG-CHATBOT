@@ -18,12 +18,19 @@ stories:
   - intent: ask_stock_news
   - action: action_fetch_stock_news
 
-- story: User manages their portfolio
+- story: fetch stock price
   steps:
-  - intent: manage_portfolio
-  - action: action_manage_portfolio
-  - intent: retrieve_past_conversations
-  - action: action_retrieve_chat_history
+    - intent: request_stock_price
+      entities:
+        - stock_symbol: "RELIANCE"
+    - action: action_fetch_stock_price
+
+- story: fetch stock trend
+  steps:
+    - intent: request_stock_trend
+      entities:
+        - stock_symbol: "RELIANCE"
+    - action: action_fetch_stock_trend
 
 - story: User resets the conversation
   steps:
@@ -32,12 +39,20 @@ stories:
   - intent: greet
   - action: utter_greet
 
-- story: User seeks financial education
+- story: financial education query
   steps:
-  - intent: ask_financial_basics
-  - action: action_financial_education
-  - intent: ask_risk_analysis
-  - action: action_risk_analysis
+    - intent: ask_financial_topic
+      entities:
+        - topic: "investing"
+    - action: action_financial_education
+- story: elaborate on investing
+  steps:
+    - intent: ask_financial_topic
+      entities:
+        - topic: "investing"
+    - action: action_financial_education
+    - intent: ask_for_elaboration  # Example intent for elaboration
+    - action: action_financial_education  # This will trigger elaboration response
 
 - story: User asks for tax-saving and investment guidance
   steps:
@@ -48,8 +63,6 @@ stories:
 
 - story: User inquires about different investment options
   steps:
-  - intent: ask_crypto_investments
-  - action: action_crypto_investment_advice
   - intent: ask_gold_investments
   - action: action_gold_investment_tips
   - intent: ask_real_estate_investments
@@ -66,6 +79,33 @@ stories:
   - intent: ask_insurance_guidance
   - action: action_insurance_advice
 
+- story: ask for loan guidance
+  steps:
+    - intent: ask_loan_guidance
+      entities:
+        - loan_type: "home"
+        - loan_amount: "500000"
+        - loan_duration: 5
+    - action: action_loan_guidance
+
+- story: ask for insurance guidance
+  steps:
+    - intent: request_insurance_advice
+      entities:
+        - insurance_type: "health"
+        - age: 30
+        - user_income: 500000
+    - action: action_insurance_advice
+
+- story: ask for debt management tips
+  steps:
+    - intent: ask_debt_management
+      entities:
+        - monthly_income: "75000"
+        - total_debt: "300000"
+        - monthly_expenses: "50000"
+    - action: action_debt_management_tips
+
 - story: User asks about market trends and forecasts
   steps:
   - intent: ask_market_forecast
@@ -73,5 +113,38 @@ stories:
   - intent: ask_stock_trend
   - action: action_fetch_stock_trend
 
+- story: fetch gold investment tips
+  steps:
+    - intent: request_gold_investment_tips
+    - action: action_gold_investment_tips
+
+- story: fetch real estate insights
+  steps:
+    - intent: request_real_estate_insights
+    - action: action_fetch_real_estate_insights
+
+- story: goal-based investment advice
+  steps:
+    - intent: request_goal_based_investment_advice
+      entities:
+        - investment_goal: "100000"
+        - risk_level: "moderate"
+        - investment_amount: "50000"
+        - investment_duration: "5"
+    - action: action_goal_based_investment
+
+- story: analyze risk and suggest investments
+  steps:
+    - intent: ask_risk_analysis
+      entities:
+        - investment_goal: "100000"
+        - investment_amount: "50000"
+        - investment_duration_years: "5"
+    - action: action_risk_analysis
+
+- story: ask for market forecast
+  steps:
+    - intent: request_market_forecast
+    - action: action_market_forecast
 
 

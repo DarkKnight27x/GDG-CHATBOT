@@ -4,6 +4,7 @@ intents:
   - greet
   - goodbye
   - affirm
+  - deny
   - mood_great
   - mood_unhappy
   - bot_challenge
@@ -27,6 +28,12 @@ intents:
   - ask_emergency_fund
   - ask_debt_management
   - ask_market_forecast
+  - ask_elss
+  - ask_ppf
+  - ask_nps
+  - ask_fd_rates
+  - ask_sip_calculator
+  - ask_gst_calculation
 
 entities:
   - age
@@ -36,14 +43,31 @@ entities:
   - investment_duration
   - stock_symbol
   - name
+  - indian_stock
+  - mutual_fund
+  - insurance_type
+  - tax_section
+  - income_level
+  - existing_investments
 
 slots:
+  user_profile_complete:
+    type: bool
+    influence_conversation: true
+    initial_value: false
+    
   age:
     type: float
     influence_conversation: true
+    min_value: 18
+    max_value: 100
     mappings:
       - type: from_entity
         entity: age
+
+  username:
+    type: text
+    influence_conversation: false
 
   investment_amount:
     type: float
@@ -51,45 +75,96 @@ slots:
     mappings:
       - type: from_entity
         entity: investment_amount
+        conditions:
+          - active_loop: investment_profile_form
 
   investment_goal:
-    type: text
+    type: float
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: investment_goal
 
   risk_level:
-    type: text
+    type: categorical
     influence_conversation: true
+    values: [low, medium, high]
     mappings:
       - type: from_entity
         entity: risk_level
 
-  investment_duration:
-    type: text
+  investment_duration_category:
+    type: categorical
+    influence_conversation: true
+    values:
+      - short_term
+      - medium_term
+      - long_term
+    mappings:
+      - type: from_entity
+        entity: investment_duration_category
+
+  investment_duration_years:
+    type: integer
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: investment_duration
+        entity: investment_duration_years
+
+  income_level:
+    type: categorical
+    influence_conversation: true
+    values: ["<5L", "5-10L", "10-20L", "20L+"]
+    
+  tax_slab:
+    type: categorical
+    influence_conversation: true
+    values: [old, new]
+
+  existing_investments:
+    type: list
+    influence_conversation: true
 
   stock_symbol:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: stock_symbol
-
-  name:
     type: text
     influence_conversation: false
     mappings:
       - type: from_entity
-        entity: name
+        entity: stock_symbol
+  
+  loan_type:
+    type: text  # e.g., personal, home, car
+  loan_amount:
+    type: float  # Amount in INR
+  loan_duration:
+    type: integer  # Duration in years
+
+  insurance_type:
+    type: text  # e.g., health, life, car
+
+  user_income:
+    type: float
+
+  monthly_income:
+    type: float
+  monthly_expenses:
+    type: float
+  existing_savings:
+    type: float
+
+  
+  total_debt:
+    type: float  # Total debt amount in INR
+  
+
+  
 
 responses:
   utter_greet:
-    - text: "Hello! How can I assist you today?"
+    - text: "Hi! I'm your financial guide. How can I assist you today?"
+  
+  utter_disclaimer:
+    - text: "Note: I'm not SEBI-registered. Please consult a certified financial planner for personalized advice."
 
   utter_goodbye:
     - text: "Goodbye! Have a great day!"
@@ -103,36 +178,48 @@ responses:
   utter_sad:
     - text: "I'm sorry to hear that. How can I help?"
 
-  utter_acknowledge_user_details:
-    - text: "Please provide your name and age."
-
   utter_bot_challenge:
-    - text: "I'm an AI assistant, here to help with your financial queries."
+    - text: "I'm sorry, I didn't quite understand that. Can you rephrase?"
+
+
+  
+forms:
+  investment_profile_form:
+    required_slots:
+      - age
+      - income_level
+      - risk_level
+      - investment_goal
+      - investment_amount
+      - investment_duration
 
 actions:
   - action_investment_suggestion
   - action_fetch_stock_price
   - action_fetch_stock_trend
   - action_fetch_stock_news
-  - action_manage_portfolio
   - action_retrieve_chat_history
   - action_reset_chat
   - action_financial_education
   - action_risk_analysis
   - action_tax_saving_tips
-  - action_crypto_investments
   - action_loan_guidance
   - action_insurance_advice
-  - action_real_estate_tips
+  - action_fetch_real_estate_insights
   - action_gold_investment_tips
   - action_goal_based_investment
   - action_emergency_fund_advice
   - action_debt_management_tips
   - action_market_forecast
-  - action_crypto_investment_advice
-  
-
 
 session_config:
-  session_expiration_time: 60
+  session_expiration_time: 60  # Minutes for security
   carry_over_slots_to_new_session: true
+  
+  Policies:
+  - name: RulePolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+  - name: MemoizationPolicy
+    max_history: 5

@@ -91,7 +91,6 @@ nlu:
     - Which are the safest investments in India?
     - What are the best investment options for tax saving?
     - Should I invest in real estate?
-    - Can you help me build a diversified portfolio?
     - I have ₹[200000](investment_amount). Where should I invest it?
     - Can I double my money in [5](investment_duration) years?
     - What are some high-return investment options?
@@ -458,108 +457,6 @@ nlu:
     - What are experts saying about [BPCL](stock_symbol) this quarter?
     - Show me the latest on [BHEL](stock_symbol) expansion plans.
 
-- intent: manage_portfolio
-  examples: |
-    - Add [INFY.NS](stock_symbol) to my portfolio.
-    - Remove [TCS.NS](stock_symbol) from my portfolio.
-    - Show me my portfolio.
-    - Add [RELIANCE.NS](stock_symbol) to my investments.
-    - Remove [HDFC.NS](stock_symbol) from my watchlist.
-    - Can you track [TATAMOTORS.NS](stock_symbol) for me?
-    - Add [ICICIBANK.NS](stock_symbol) to my holdings.
-    - Delete [WIPRO.NS](stock_symbol) from my portfolio.
-    - Show me all stocks in my portfolio.
-    - Update my portfolio with [AXISBANK.NS](stock_symbol).
-    - Add [ITC.NS](stock_symbol) to my watchlist.
-    - Remove [MARUTI.NS](stock_symbol) from my investments.
-    - What stocks do I currently hold?
-    - List all stocks in my portfolio.
-    - Remove all stocks from my watchlist.
-    - Track [SBIN.NS](stock_symbol) for me.
-    - I want to invest in [HDFCBANK.NS](stock_symbol).
-    - Remove [BHARTIARTL.NS](stock_symbol) from my holdings.
-    - How is my portfolio performing?
-    - Show my portfolio balance.
-    - Add [SUNPHARMA.NS](stock_symbol) to my stock list.
-    - Track my investment in [COALINDIA.NS](stock_symbol).
-    - Remove [ONGC.NS](stock_symbol) from my portfolio.
-    - Show me my stock holdings.
-    - Can you display my watchlist?
-    - Add [BAJAJFINANCE.NS](stock_symbol) to my portfolio.
-    - Monitor my portfolio’s performance.
-    - Show me my stock gains and losses.
-    - What’s my total portfolio value?
-    - List stocks I’ve invested in.
-    - Can you update my portfolio with [LT.NS](stock_symbol)?
-    - Remove [TITAN.NS](stock_symbol) from my investments.
-    - Show me my investment history.
-    - Add [DABUR.NS](stock_symbol) to my tracking list.
-    - Show me my profit and loss summary.
-    - How much profit have I made from my portfolio?
-    - Add [HAVELLS.NS](stock_symbol) to my portfolio.
-    - Delete my stock portfolio.
-    - Which stocks in my portfolio are in loss?
-    - Track [EICHERMOT.NS](stock_symbol) daily for me.
-    - Remove all my stock investments.
-    - Move [INDIGO.NS](stock_symbol) from watchlist to portfolio.
-    - Show my holdings in a pie chart.
-    - Which stock in my portfolio has performed the best?
-    - Add [M&M.NS](stock_symbol) to my portfolio.
-    - Add [BPCL.NS](stock_symbol) and [IOC.NS](stock_symbol) to my holdings.
-    - What’s the total return on my portfolio?
-    - Set an alert if [HDFC.NS](stock_symbol) drops below ₹2500.
-    - How much have I invested in [INFY.NS](stock_symbol)?
-    - Remove stocks that are in loss from my portfolio.
-    - Show my stock allocation.
-    - Export my portfolio as a CSV file.
-    - Compare my portfolio with NIFTY 50.
-    - Show me a summary of my investments.
-    - Display my highest-performing stocks.
-    - Remove the worst-performing stock from my portfolio.
-    - Transfer all stocks from my watchlist to my holdings.
-    - How much cash do I have left to invest?
-    - Add a stock alert for [JSWSTEEL.NS](stock_symbol).
-    - Which stocks in my portfolio have dividends?
-    - Remove [BIOCON.NS](stock_symbol) and [DRREDDY.NS](stock_symbol) from my holdings.
-    - Show me the top gainer in my portfolio.
-    - Add all stocks from my watchlist to my portfolio.
-    - What’s the average return of my portfolio?
-    - How much loss have I incurred in my stock holdings?
-    - Show me my long-term vs short-term investments.
-    - Set a target price alert for [TCS.NS](stock_symbol) at ₹4200.
-    - Can you fetch my portfolio performance for the past 6 months?
-    - How diversified is my portfolio?
-    - Show my portfolio in percentage allocation.
-    - Can you remove stocks below ₹100 from my holdings?
-    - What’s my exposure to tech stocks in my portfolio?
-    - Alert me when any stock in my portfolio falls 5%.
-    - Set a stop-loss for [TATAPOWER.NS](stock_symbol) at ₹250.
-    - Show me my total dividends earned.
-    - What’s my return on investment for [HDFCBANK.NS](stock_symbol)?
-    - Add a SIP investment in [SBI.NS](stock_symbol).
-    - Remove illiquid stocks from my portfolio.
-    - Which stocks in my portfolio are undervalued?
-    - Show me my total capital gains.
-    - Remove stocks with low liquidity from my holdings.
-    - Which of my stocks are near their 52-week high?
-    - Add an alert for a 10% drop in [HCLTECH.NS](stock_symbol).
-    - List stocks I have been tracking for over a year.
-    - Which stocks in my portfolio have high volatility?
-    - Show me my best-performing sector.
-    - Display my historical investment performance.
-    - What’s my portfolio’s risk level?
-    - Set a trailing stop-loss for [IRCTC.NS](stock_symbol).
-    - Track [GODREJPROP.NS](stock_symbol) for dividend payouts.
-    - Remove duplicate stocks from my holdings.
-    - Set a price target of ₹5000 for [ADANIENT.NS](stock_symbol).
-    - Which stocks in my portfolio have earnings reports this week?
-    - Export my portfolio as a PDF.
-    - Show me my investment trends over the past year.
-    - List all IPOs I have invested in.
-    - Which stocks in my portfolio have a P/E ratio above 30?
-    - What percentage of my portfolio is in blue-chip stocks?
-    - How many shares do I own of [LT.NS](stock_symbol)?
-    - Add [NTPC.NS](stock_symbol) to my portfolio.
 
 - intent: retrieve_past_conversations
   examples: |
@@ -1066,113 +963,6 @@ nlu:
     - What are the tax benefits of investing in real estate?
     - How do I save tax on capital gains using a tax-free account?
     - What is the tax-free limit for charitable donations?
-
-- intent: ask_crypto_investments
-  examples: |
-    - Should I invest in cryptocurrency?
-    - What are the risks of Bitcoin?
-    - Is Ethereum a good investment?
-    - Can I buy crypto in India legally?
-    - What is blockchain, and how does it work?
-    - How does taxation on crypto work in India?
-    - Should I invest in NFTs?
-    - What are the safest ways to invest in cryptocurrency?
-    - Can you suggest any alternative investments?
-    - What is the future of Bitcoin?
-    - How do I buy cryptocurrency in India?
-    - Is crypto banned in India?
-    - What is the best cryptocurrency to invest in?
-    - How can I store my crypto safely?
-    - Are stablecoins a good investment?
-    - What are the tax implications of crypto trading?
-    - What is the best platform to buy crypto in India?
-    - How do I secure my crypto wallet?
-    - Is it better to invest in Bitcoin or altcoins?
-    - What are the advantages of decentralized finance (DeFi)?
-    - Can I lose all my money in crypto?
-    - How does staking work in cryptocurrency?
-    - What is the safest way to store Bitcoin?
-    - Should I invest in meme coins like Dogecoin or Shiba Inu?
-    - How do I analyze crypto market trends?
-    - What is a hardware wallet, and do I need one?
-    - Are there any government regulations on crypto in India?
-    - How does crypto mining work?
-    - Is it safe to invest in new ICOs?
-    - What are the risks of investing in NFTs?
-    - How do I withdraw crypto to INR in India?
-    - How does crypto taxation work under the new rules?
-    - What are gas fees in Ethereum?
-    - Can I earn passive income with crypto?
-    - How do I avoid crypto scams?
-    - What are some popular altcoins to invest in?
-    - What is a smart contract in blockchain?
-    - How do I track my crypto portfolio?
-    - Is crypto investing better than stock market investing?
-    - Should I invest in Bitcoin for the long term?
-    - What are the benefits of using a decentralized exchange?
-    - How do crypto loans work?
-    - What is the difference between Bitcoin and Ethereum?
-    - What is the best strategy for crypto trading?
-    - Should I hold or sell my crypto during a market crash?
-    - What is a crypto airdrop?
-    - How do I avoid high transaction fees in crypto?
-    - Can I use crypto for international transactions?
-    - What are the risks of using centralized exchanges?
-    - How does crypto arbitrage trading work?
-    - How do I buy Bitcoin in India legally?
-    - What are the safest cryptocurrency exchanges?
-    - What are the risks of keeping crypto on an exchange?
-    - Is it possible to trade crypto without KYC?
-    - What is the future of Ethereum after the merge?
-    - What is the best way to dollar-cost average into crypto?
-    - How do I invest in metaverse tokens?
-    - Are there any Indian banks that support crypto transactions?
-    - How does taxation differ for long-term and short-term crypto holdings?
-    - Can I buy Bitcoin with a credit card in India?
-    - How do crypto lending platforms work?
-    - How do I read a crypto candlestick chart?
-    - How do I know if a crypto project is a scam?
-    - What are the best Telegram groups for crypto signals?
-    - How does token burning work in cryptocurrency?
-    - What is a crypto bear market?
-    - What is the impact of global regulations on crypto prices?
-    - Can I use crypto for everyday purchases in India?
-    - How do I stake Ethereum?
-    - What is the difference between proof-of-work and proof-of-stake?
-    - How can I trade crypto futures in India?
-    - What is DeFi, and how can I invest in it?
-    - What are the biggest risks of investing in crypto?
-    - Is Bitcoin mining profitable in India?
-    - Should I invest in crypto during a bull market?
-    - How does leverage trading in crypto work?
-    - How do I find undervalued crypto projects?
-    - What is a whitepaper in cryptocurrency?
-    - Can I send crypto from India to another country?
-    - What happens if I lose access to my crypto wallet?
-    - What is a decentralized autonomous organization (DAO)?
-    - Is it possible to recover stolen crypto?
-    - What is the role of NFTs in the crypto ecosystem?
-    - What is an Initial DEX Offering (IDO)?
-    - How does tokenomics affect a cryptocurrency's value?
-    - Are crypto gains taxed in India?
-    - What is a wrapped token in crypto?
-    - How do I start yield farming in crypto?
-    - What is a rug pull in crypto?
-    - Should I invest in Layer 2 solutions like Polygon?
-    - How do I move my crypto to a cold wallet?
-    - What is the Lightning Network for Bitcoin?
-    - Is there any insurance for crypto investments?
-    - What are the risks of crypto staking?
-    - How do I calculate capital gains tax on crypto in India?
-    - What is a smart contract audit, and why is it important?
-    - Can I invest in crypto using UPI in India?
-    - How do I convert my crypto to stablecoins?
-    - What are the benefits of using Binance over other exchanges?
-    - How can I hedge against crypto market volatility?
-    - What is the difference between utility tokens and security tokens?
-    - How do I protect my crypto from hacks?
-    - Should I follow crypto influencers for investment advice?
-
 
 - intent: ask_loan_guidance
   examples: |
@@ -1966,3 +1756,82 @@ nlu:
     - Is now a good time to invest in emerging markets?
     - Should I diversify into global stocks?
     - How do central bank policies affect market forecasts?
+
+entities:
+- age:
+    examples:
+     |-
+       [25](age)
+       [30](age)
+       [45](age)
+
+- investment_amount:
+    examples:
+     |-
+       [10000](investment_amount)
+       [50000](investment_amount)
+       [1 lakh](investment_amount)
+       [5 lakh](investment_amount)
+       [10 lakh](investment_amount)
+       [1 crore](investment_amount)
+       [1 cr](investment_amount)
+- investment_goal:
+    examples:
+     |-
+       "retirement"
+       "buying a house"
+       "children's education"
+       "wealth growth"
+       "vacation"
+       "investment"
+
+- risk_level:
+    examples:
+     |-
+       [low](risk_level)
+       [medium](risk_level)
+       [high](risk_level)
+
+- investment_duration:
+    examples:
+     |-
+       [short_term](investment_duration)
+       [medium_term](investment_duration)
+       [long_term](investment_duration)
+       [1 year](investment_duration)
+       [10 years](investment_duration)
+       [12 months](investment_duration)
+- stock_symbol:
+    examples:
+     |-
+       [TCS](stock_symbol)
+       [Reliance](stock_symbol)
+       [HDFC Bank](stock_symbol)
+       [Infosys](stock_symbol)
+       [Bajaj Finance](stock_symbol)
+       [Maruti Suzuki](stock_symbol)
+       [Tata Motors](stock_symbol)
+       [Nestle India](stock_symbol)
+       [Kotak Mahindra Bank](stock_symbol)
+       [L&T](stock_symbol)
+       [Asian Paints](stock_symbol)
+       [HDFC](stock_symbol)
+       [ICICI Bank](stock_symbol)
+       [Axis Bank](stock_symbol)
+       [Adani Enterprises](stock_symbol)
+       [Tata Steel](stock_symbol)
+       [JSW Steel](stock_symbol)
+       [Bharat Petroleum](stock_symbol)
+       [BPCL](stock_symbol) 
+
+- intent: ask_for_elaboration
+  examples:
+    |-
+      Yes, I want to know more about the investing.
+      Elaborate on bonds
+      Explain in detail.
+      Longer explanation of investing
+      Give me more details.
+      More information.
+      More information on bonds.
+

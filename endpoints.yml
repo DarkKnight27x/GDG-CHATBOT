@@ -22,11 +22,11 @@ cors:
 
 #tracker_store:
 #    type: redis
-#    url: <host of the redis instance, e.g. localhost>
-#    port: <port of your redis instance, usually 6379>
-#    db: <number of your database within redis, e.g. 0>
-#    password: <password used for authentication>
-#    use_ssl: <whether or not the communication is encrypted, default false>
+#    url: localhost
+#    port: 6379
+#    db:  0
+#    password: ""
+#    use_ssl: False
 
 #tracker_store:
 #    type: mongod

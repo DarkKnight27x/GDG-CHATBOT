@@ -13,27 +13,20 @@ intents:
   - ask_stock_price
   - ask_stock_trend
   - ask_stock_news
-  - manage_portfolio
   - retrieve_past_conversations
   - reset_conversation
   - ask_financial_basics
   - ask_risk_analysis
   - ask_tax_saving
-  - ask_crypto_investments
   - ask_loan_guidance
-  - ask_insurance_guidance
+  - ask_insurance_advice
   - ask_real_estate_investments
   - ask_gold_investments
   - ask_goal_based_investment
   - ask_emergency_fund
   - ask_debt_management
   - ask_market_forecast
-  - ask_elss
-  - ask_ppf
-  - ask_nps
-  - ask_fd_rates
-  - ask_sip_calculator
-  - ask_gst_calculation
+
 
 entities:
   - age
@@ -55,6 +48,8 @@ slots:
     type: bool
     influence_conversation: true
     initial_value: false
+    mappings:
+      - type: custom
     
   age:
     type: float
@@ -68,6 +63,8 @@ slots:
   username:
     type: text
     influence_conversation: false
+    mappings:
+      - type: from_text
 
   investment_amount:
     type: float
@@ -105,25 +102,41 @@ slots:
         entity: investment_duration_category
 
   investment_duration_years:
-    type: integer
+    type: float
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: investment_duration_years
 
+  investment_duration:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: investment_duration
+
   income_level:
     type: categorical
     influence_conversation: true
     values: ["<5L", "5-10L", "10-20L", "20L+"]
+    mappings:
+      - type: from_entity
+        entity: income_level
     
   tax_slab:
     type: categorical
     influence_conversation: true
     values: [old, new]
+    mappings:
+      - type: from_entity
+        entity: tax_slab
 
   existing_investments:
     type: list
     influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: existing_investments
 
   stock_symbol:
     type: text
@@ -134,28 +147,59 @@ slots:
   
   loan_type:
     type: text  # e.g., personal, home, car
+    mappings:
+      - type: from_entity
+        entity: loan_type
+
   loan_amount:
     type: float  # Amount in INR
+    mappings:
+      - type: from_entity
+        entity: loan_amount
+
   loan_duration:
-    type: integer  # Duration in years
+    type: float  # Duration in years
+    mappings:
+      - type: from_entity
+        entity: loan_duration
 
   insurance_type:
     type: text  # e.g., health, life, car
+    mappings:
+      - type: from_entity
+        entity: insurance_type
 
   user_income:
     type: float
+    mappings:
+      - type: from_entity
+        entity: user_income
 
   monthly_income:
     type: float
+    mappings:
+      - type: from_entity
+        entity: monthly_income
+
   monthly_expenses:
     type: float
+    mappings:
+      - type: from_entity
+        entity: monthly_expenses
+
   existing_savings:
     type: float
+    mappings:
+      - type: from_entity
+        entity: existing_savings
+
 
   
   total_debt:
     type: float  # Total debt amount in INR
-  
+    mappings:
+      - type: from_entity
+        entity: total_debt 
 
   
 
@@ -211,6 +255,9 @@ actions:
   - action_emergency_fund_advice
   - action_debt_management_tips
   - action_market_forecast
+  - action_real_estate_tips
+  - action_insurance_guidance
+  
 
 session_config:
   session_expiration_time: 60  # Minutes for security

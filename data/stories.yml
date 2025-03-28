@@ -3,8 +3,6 @@ version: "3.1"
 stories:
 - story: User asks for investment advice and provides details
   steps:
-  - intent: provide_user_details 
-  - action: utter_acknowledge_user_details
   - intent: ask_investment_suggestion
   - action: action_investment_suggestion
 
@@ -20,14 +18,14 @@ stories:
 
 - story: fetch stock price
   steps:
-    - intent: request_stock_price
+    - intent: ask_stock_price
       entities:
         - stock_symbol: "RELIANCE"
     - action: action_fetch_stock_price
 
 - story: fetch stock trend
   steps:
-    - intent: request_stock_trend
+    - intent: ask_stock_trend
       entities:
         - stock_symbol: "RELIANCE"
     - action: action_fetch_stock_trend
@@ -41,43 +39,50 @@ stories:
 
 - story: financial education query
   steps:
-    - intent: ask_financial_topic
+    - intent: ask_financial_basics
       entities:
         - topic: "investing"
     - action: action_financial_education
+    
 - story: elaborate on investing
   steps:
-    - intent: ask_financial_topic
+    - intent: ask_financial_basics
       entities:
         - topic: "investing"
     - action: action_financial_education
-    - intent: ask_for_elaboration  # Example intent for elaboration
-    - action: action_financial_education  # This will trigger elaboration response
-
+    
 - story: User asks for tax-saving and investment guidance
   steps:
   - intent: ask_tax_saving
   - action: action_tax_saving_tips
+  - action: utter_disclaimer
   - intent: ask_goal_based_investment
   - action: action_goal_based_investment
+  - action: utter_disclaimer
 
 - story: User inquires about different investment options
   steps:
   - intent: ask_gold_investments
   - action: action_gold_investment_tips
+  - action: utter_disclaimer
   - intent: ask_real_estate_investments
   - action: action_real_estate_tips
+  - action: utter_disclaimer
 
 - story: User seeks financial stability
   steps:
   - intent: ask_emergency_fund
   - action: action_emergency_fund_advice
+  - action: utter_disclaimer
   - intent: ask_debt_management
   - action: action_debt_management_tips
+  - action: utter_disclaimer
   - intent: ask_loan_guidance
   - action: action_loan_guidance
+  - action: utter_disclaimer
   - intent: ask_insurance_guidance
-  - action: action_insurance_advice
+  - action: action_insurance_guidance
+  - action: utter_disclaimer
 
 - story: ask for loan guidance
   steps:
@@ -87,15 +92,17 @@ stories:
         - loan_amount: "500000"
         - loan_duration: 5
     - action: action_loan_guidance
+    - action: utter_disclaimer
 
 - story: ask for insurance guidance
   steps:
-    - intent: request_insurance_advice
+    - intent: ask_insurance_advice
       entities:
         - insurance_type: "health"
         - age: 30
         - user_income: 500000
     - action: action_insurance_advice
+    - action: utter_disclaimer
 
 - story: ask for debt management tips
   steps:
@@ -105,6 +112,7 @@ stories:
         - total_debt: "300000"
         - monthly_expenses: "50000"
     - action: action_debt_management_tips
+    - action: utter_disclaimer
 
 - story: User asks about market trends and forecasts
   steps:
@@ -115,23 +123,26 @@ stories:
 
 - story: fetch gold investment tips
   steps:
-    - intent: request_gold_investment_tips
+    - intent: ask_gold_investment_tips
     - action: action_gold_investment_tips
+    - action: utter_disclaimer
 
 - story: fetch real estate insights
   steps:
-    - intent: request_real_estate_insights
+    - intent: ask_real_estate_insights
     - action: action_fetch_real_estate_insights
+    - action: utter_disclaimer
 
 - story: goal-based investment advice
   steps:
-    - intent: request_goal_based_investment_advice
+    - intent: ask_goal_based_investment_advice
       entities:
         - investment_goal: "100000"
         - risk_level: "moderate"
         - investment_amount: "50000"
         - investment_duration: "5"
     - action: action_goal_based_investment
+    - action: utter_disclaimer
 
 - story: analyze risk and suggest investments
   steps:
@@ -141,10 +152,11 @@ stories:
         - investment_amount: "50000"
         - investment_duration_years: "5"
     - action: action_risk_analysis
+    - action: utter_disclaimer
 
 - story: ask for market forecast
   steps:
-    - intent: request_market_forecast
+    - intent: ask_market_forecast
     - action: action_market_forecast
 
 

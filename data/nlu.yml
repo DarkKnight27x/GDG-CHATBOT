@@ -1238,7 +1238,7 @@ nlu:
     - How do I use technology for real estate investments?
 
 
-- intent: ask_gold_investments
+- intent: ask_gold_investment_tips
   examples: |
     - Should I invest in gold?
     - What are the best ways to buy gold?
@@ -1345,7 +1345,7 @@ nlu:
     - What are the best strategies for trading gold?
 
 
-- intent: ask_goal_based_investment
+- intent: ask_goal_based_investment_advice
   examples: |
     - How do I save for my children's education?
     - What is the best way to invest for a house?

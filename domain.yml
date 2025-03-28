@@ -224,6 +224,10 @@ responses:
 
   utter_bot_challenge:
     - text: "I'm sorry, I didn't quite understand that. Can you rephrase?"
+  
+  utter_acknowledge_user_details:
+    - text: "Got it! I have noted your details."
+
 
 
   

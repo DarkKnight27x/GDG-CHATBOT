@@ -90,7 +90,7 @@ rules:
 
 - rule: Offer Insurance Guidance
   steps:
-  - intent: ask_insurance_guidance
+  - intent: ask_insurance_advice
   - action: action_insurance_advice
 
 - rule: Offer Real Estate Guidance

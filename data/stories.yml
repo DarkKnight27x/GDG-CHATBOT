@@ -55,34 +55,34 @@ stories:
   steps:
   - intent: ask_tax_saving
   - action: action_tax_saving_tips
-  - action: utter_disclaimer
+  
   - intent: ask_goal_based_investment
   - action: action_goal_based_investment
-  - action: utter_disclaimer
+ 
 
 - story: User inquires about different investment options
   steps:
   - intent: ask_gold_investments
   - action: action_gold_investment_tips
-  - action: utter_disclaimer
+  
   - intent: ask_real_estate_investments
-  - action: action_real_estate_tips
-  - action: utter_disclaimer
+  - action: action_fetch_real_estate_insights
+ 
 
 - story: User seeks financial stability
   steps:
   - intent: ask_emergency_fund
   - action: action_emergency_fund_advice
-  - action: utter_disclaimer
+  
   - intent: ask_debt_management
   - action: action_debt_management_tips
-  - action: utter_disclaimer
+  
   - intent: ask_loan_guidance
   - action: action_loan_guidance
-  - action: utter_disclaimer
-  - intent: ask_insurance_guidance
+  
+  - intent: ask_insurance_advice
   - action: action_insurance_guidance
-  - action: utter_disclaimer
+  
 
 - story: ask for loan guidance
   steps:
@@ -92,7 +92,7 @@ stories:
         - loan_amount: "500000"
         - loan_duration: 5
     - action: action_loan_guidance
-    - action: utter_disclaimer
+    
 
 - story: ask for insurance guidance
   steps:
@@ -101,8 +101,8 @@ stories:
         - insurance_type: "health"
         - age: 30
         - user_income: 500000
-    - action: action_insurance_advice
-    - action: utter_disclaimer
+    - action: action_insurance_guidance
+  
 
 - story: ask for debt management tips
   steps:
@@ -112,7 +112,7 @@ stories:
         - total_debt: "300000"
         - monthly_expenses: "50000"
     - action: action_debt_management_tips
-    - action: utter_disclaimer
+   
 
 - story: User asks about market trends and forecasts
   steps:
@@ -123,26 +123,26 @@ stories:
 
 - story: fetch gold investment tips
   steps:
-    - intent: ask_gold_investment_tips
+    - intent: ask_gold_investments
     - action: action_gold_investment_tips
-    - action: utter_disclaimer
+  
 
 - story: fetch real estate insights
   steps:
-    - intent: ask_real_estate_insights
+    - intent: ask_real_estate_investments
     - action: action_fetch_real_estate_insights
-    - action: utter_disclaimer
+
 
 - story: goal-based investment advice
   steps:
-    - intent: ask_goal_based_investment_advice
+    - intent: ask_goal_based_investment
       entities:
         - investment_goal: "100000"
         - risk_level: "moderate"
         - investment_amount: "50000"
         - investment_duration: "5"
     - action: action_goal_based_investment
-    - action: utter_disclaimer
+    
 
 - story: analyze risk and suggest investments
   steps:
@@ -152,7 +152,7 @@ stories:
         - investment_amount: "50000"
         - investment_duration_years: "5"
     - action: action_risk_analysis
-    - action: utter_disclaimer
+
 
 - story: ask for market forecast
   steps:
